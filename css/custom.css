@@ -69,7 +69,8 @@ body {
   position: absolute;
   left: -20px;
   top: -30px;
-  color:  #FD7E14;
+  color: #fff;
+  /* color:  #FD7E14; */
   }
   
   .blockquote-cite {
