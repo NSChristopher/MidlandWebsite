@@ -205,6 +205,7 @@ transform: translateY(2px);
   background-size: cover;
 }
 
+
 .payments-head {
   background-image: url('../img/Payments_Page.png');
   background-size: cover;
@@ -222,6 +223,13 @@ transform: translateY(2px);
 
 .footer {
   background-color: rgb(34, 34, 34);
+}
+
+.customers {
+  background-color: rgb(204, 204, 204);
+}
+.customer-logo {
+  filter: opacity(70%);
 }
 
 /* Featurett Divider */
