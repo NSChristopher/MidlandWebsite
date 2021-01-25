@@ -158,6 +158,9 @@ transform: translateY(2px);
 .vh-75 {
   height: 75.1vh;
 }
+.vh-115 {
+  height: 115.1vh;
+}
 .vh-125 {
   height: 125.1vh;
 }
@@ -171,7 +174,7 @@ transform: translateY(2px);
 }
 
 .landing-head {
-  background: url('../img/PlatinumPos_LandBck5.png') 50% 0% no-repeat;
+  background: url('../img/LandingPage_Pos.png') 50% 0% no-repeat;
 	background-size: cover;
 	color: white;
 }
@@ -198,12 +201,22 @@ transform: translateY(2px);
 }
 
 .pos-artical {
-  background-image: url('../img/AdobeStock_295463839.jpeg');
+  background-image: url('../img/AbstractWhiteBg.jpeg');
   background-size: cover;
 }
 
 .payments-head {
-  background-image: url('../img/Paymentsimg.jpeg');
+  background-image: url('../img/Payments_Page.png');
+  background-size: cover;
+}
+
+.loans-head {
+  background-image: url('../img/Loan_Page.png');
+  background-size: cover;
+}
+
+.pos-head {
+  background-image: url('../img/POS_Page.png');
   background-size: cover;
 }
 
@@ -241,3 +254,18 @@ transform: translateY(2px);
  .space {
    height: 7.5%;
  }
+
+ /* animation */
+
+ .fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
