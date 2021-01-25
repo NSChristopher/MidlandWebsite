@@ -1,0 +1,243 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.jumbotron-heading {
+  font-weight: 900;
+}
+
+.Jumbotron-sub-heading {
+  font-weight: 200;
+  color: whitesmoke;
+}
+
+.section-heading {
+  font-weight: 700;
+}
+
+.card-title {
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Neuropolitical';
+  src: url('Neuro.woff');
+  src: url('Neuro.woff2');
+}
+
+.logo {
+  font-family: 'Neuropolitical'!important;
+}
+
+/* Cards */
+
+.card {
+  border-radius: 10%;
+  overflow: hidden;
+}
+
+/* Buttons */
+
+.btn-warning {
+  background-color: #FD7E14;
+}
+
+/* blockquote */
+
+.blockquote {
+  font-style: italic;
+  font-weight: 500;
+  margin: 0.25em 0;
+  padding: 0.35em 40px;
+  line-height: 1.45;
+  position: relative;
+  color: white;
+  }
+  
+  .blockquote:before {
+  font-style: normal;
+  font-family: 'Manrope', sans-serif;  display: block;
+  padding-left: 10px;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -20px;
+  top: -30px;
+  color:  #FD7E14;
+  }
+  
+  .blockquote-cite {
+  color: #999999;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+  }
+   
+  .blockquote-cite:before {
+  content: "\2014 \2009";
+  }
+
+/* slant */
+
+.topslant-container {
+  clip-path: polygon(
+    0 0,
+    100% calc(6vw),
+    100% 100%,
+    0 100%
+  );
+background-color: #fff;
+height: 100px;
+transform: translateY(2px);
+}
+
+.bottomslant-container {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 calc(100% - 6vw)
+    );
+  background-color: #fff;
+  height: 100px;
+  transform: translateY(-2px);
+  }
+
+  .absolute-bottom{
+    bottom: 0;
+    z-index: 3;
+
+  }.absolute-top{
+    top: 0;
+    z-index: 3;
+  }
+
+.slant-container {
+  padding-top: 7%;
+  padding-bottom: 7%;
+  transform: skewY(3.33deg);
+  position: relative;
+  width: 100%;
+  margin-top: -3%;
+  margin-bottom: -3%;
+}
+
+.unslant-content {
+  transform: skewY(-3.33deg);
+}
+
+.vertical-center {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+}
+.mt-15 {
+  margin-top: 15%;
+}
+
+/* sections */
+
+.vh-50 {
+  height: 50.1vh;
+}
+.vh-15 {
+  height: 15.1vh;
+}
+.vh-25 {
+  height: 25.1vh;
+}
+.vh-33 {
+  height: 33.33vh;
+}
+.vh-75 {
+  height: 75.1vh;
+}
+.vh-125 {
+  height: 125.1vh;
+}
+
+.three-features {
+    height: 750px;
+}
+
+.services {
+  background-color: #fff;
+}
+
+.landing-head {
+  background: url('../img/PlatinumPos_LandBck5.png') 50% 0% no-repeat;
+	background-size: cover;
+	color: white;
+}
+
+@media (max-width : 767px ){
+	.landing-head{
+    text-align: center !important;
+    background-size: 300%;
+  }
+  /* .landing-head-content{
+    backdrop-filter: blur(2px);
+  } */
+  .card-body {
+    text-align: center;
+  }
+}
+
+.quote {
+  background-color: #0054A6;
+}
+
+.customers {
+    background-color: grey;
+}
+
+.pos-artical {
+  background-image: url('../img/AdobeStock_295463839.jpeg');
+  background-size: cover;
+}
+
+.payments-head {
+  background-image: url('../img/Paymentsimg.jpeg');
+  background-size: cover;
+}
+
+.footer {
+  background-color: rgb(34, 34, 34);
+}
+
+/* Featurett Divider */
+
+ .featurette-divider {
+  margin: 80px 0; /* <hr> between each */
+}
+
+/* Nav Bar */
+
+.navbar {
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgba(187, 188, 255, 0.096);
+    backdrop-filter: blur(4px);
+}
+.logo {
+  color: white;
+}
+
+:hover.navbar-brand {
+  color: whitesmoke;
+}
+.navbar-scrolled .logo {
+  color: #0054A6 !important;
+}
+
+ /* space */
+
+ .space {
+   height: 7.5%;
+ }
