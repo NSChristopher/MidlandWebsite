@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/NSChristopher/MidlandWebsite/issues"
   },
-  "homepage": "https://github.com/NSChristopher/MidlandWebsite#readme"
+  "homepage": "https://github.com/NSChristopher/MidlandWebsite#readme",
+  "devDependencies": {}
 }

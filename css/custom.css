@@ -19,12 +19,17 @@ body {
 }
 
 .section-heading {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .card-title {
   font-weight: 600;
 }
+
+p{
+  font-size: 14pt;
+}
+
 @font-face {
   font-family: 'Neuropolitical';
   src: url('Neuro.woff');
@@ -38,7 +43,7 @@ body {
 /* Cards */
 
 .card {
-  border-radius: 10%;
+  border-radius: 7%;
   overflow: hidden;
 }
 
@@ -46,6 +51,9 @@ body {
 
 .btn-warning {
   background-color: #FD7E14;
+}
+.btn-warning:hover {
+  background-color: #ff9239;
 }
 
 /* blockquote */
@@ -184,10 +192,8 @@ transform: translateY(2px);
 	.landing-head{
     text-align: center !important;
     background-size: 300%;
+    backdrop-filter:  #0054A6;
   }
-  /* .landing-head-content{
-    backdrop-filter: blur(2px);
-  } */
   .card-body {
     text-align: center;
   }
@@ -197,13 +203,14 @@ transform: translateY(2px);
   background-color: #0054A6;
 }
 
-.customers {
-    background-color: grey;
-}
-
 .pos-artical {
   background-image: url('../img/AbstractWhiteBg.jpeg');
   background-size: cover;
+}
+
+.pos-features {
+  font-size: large;
+  color: #0054A6;
 }
 
 
@@ -230,7 +237,7 @@ transform: translateY(2px);
   background-color: rgb(204, 204, 204);
 }
 .customer-logo {
-  filter: opacity(70%);
+  filter: opacity(60%);
 }
 
 /* Featurett Divider */
@@ -242,10 +249,10 @@ transform: translateY(2px);
 /* Nav Bar */
 
 .navbar {
-    border-bottom: solid;
+    /* border-bottom: solid;
     border-width: 1px;
-    border-color: rgba(187, 188, 255, 0.096);
-    backdrop-filter: blur(4px);
+    border-color: rgba(187, 188, 255, 0.096); */
+    /* backdrop-filter: blur(4px); */
 }
 .logo {
   color: white;
