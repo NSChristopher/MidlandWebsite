@@ -191,8 +191,12 @@ transform: translateY(2px);
 @media (max-width : 767px ){
 	.landing-head{
     text-align: center !important;
+    background: linear-gradient(0deg, #0053a66b, #0053a66b), url('../img/LandingPage_Pos.png') 50% 0% no-repeat;
     background-size: 300%;
-    backdrop-filter:  #0054A6;
+    margin-bottom: -23%;
+  }
+  .Jumbotron-sub-heading{
+    font-weight: 400;
   }
   .card-body {
     text-align: center;
