@@ -191,9 +191,9 @@ transform: translateY(2px);
 @media (max-width : 767px ){
 	.landing-head{
     text-align: center !important;
-    background: linear-gradient(0deg, #0053a66b, #0053a66b), url('../img/LandingPage_Pos.png') 50% 0% no-repeat;
-    background-size: 300%;
-    margin-bottom: -23%;
+    background: url('../img/LandingPage_Mobile.png');
+    background-position: top;
+    background-size: cover;
   }
   .Jumbotron-sub-heading{
     font-weight: 400;
