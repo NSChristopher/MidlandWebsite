@@ -38,6 +38,15 @@ body {
   font-family: 'Neuropolitical'!important;
 }
 
+.inherit-style {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+ .inherit-style:active {
+  color: grey;
+}
+
 /* Cards */
 
 .card {
