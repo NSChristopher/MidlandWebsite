@@ -184,6 +184,14 @@ transform: translateY(2px);
   background: url('../img/LandingPage_Pos.png') 50% 0% no-repeat;
 	background-size: cover;
   color: white;
+  padding-bottom: 25%;
+}
+
+.landing-head-content{
+  display: inline-block;
+      align-self: center;
+     -webkit-align-self: center;
+     -ms-flex-item-align: center;
 }
 
 @media (max-width : 767px ){
@@ -192,13 +200,6 @@ transform: translateY(2px);
     background: url('../img/LandingPage_Mobile.png');
     background-position: top;
     background-size: cover;
-  }
-
-  .landing-head-content{
-    display: inline-block;
-        align-self: center;
-       -webkit-align-self: center;
-       -ms-flex-item-align: center;
   }
 
   .Jumbotron-sub-heading{
