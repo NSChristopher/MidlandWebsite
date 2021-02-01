@@ -11,11 +11,13 @@ body {
 
 .jumbotron-heading {
   font-weight: 900;
+  
 }
 
 .Jumbotron-sub-heading {
   font-weight: 200;
   color: whitesmoke;
+  font-size: 14pt;
 }
 
 .section-heading {
@@ -24,10 +26,6 @@ body {
 
 .card-title {
   font-weight: 600;
-}
-
-p{
-  font-size: 14pt;
 }
 
 @font-face {
@@ -185,7 +183,7 @@ transform: translateY(2px);
 .landing-head {
   background: url('../img/LandingPage_Pos.png') 50% 0% no-repeat;
 	background-size: cover;
-	color: white;
+  color: white;
 }
 
 @media (max-width : 767px ){
@@ -195,6 +193,14 @@ transform: translateY(2px);
     background-position: top;
     background-size: cover;
   }
+
+  .landing-head-content{
+    display: inline-block;
+        align-self: center;
+       -webkit-align-self: center;
+       -ms-flex-item-align: center;
+  }
+
   .Jumbotron-sub-heading{
     font-weight: 400;
   }
