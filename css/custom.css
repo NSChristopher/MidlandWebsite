@@ -49,9 +49,23 @@ body {
 
 /* Cards */
 
-.card {
-  border-radius: 7%;
+.card-rounded {
+  border-radius: 1rem;
   overflow: hidden;
+}
+
+.card-article {
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card-custom-img {
+  background-position: center;
+}
+
+.bg-image {
+  background-position: center;
 }
 
 /* Buttons */
@@ -160,25 +174,25 @@ transform: translateY(2px);
 /* sections */
 
 .vh-50 {
-  height: 50.1vh;
+  min-height: 50.1vh;
 }
 .vh-15 {
-  height: 15.1vh;
+  min-height: 15.1vh;
 }
 .vh-25 {
-  height: 25.1vh;
+  min-height: 25.1vh;
 }
 .vh-33 {
-  height: 33.33vh;
+  min-height: 33.33vh;
 }
 .vh-75 {
-  height: 75.1vh;
+  min-height: 75.1vh;
 }
 .vh-115 {
-  height: 115.1vh;
+  min-height: 115.1vh;
 }
 .vh-125 {
-  height: 125.1vh;
+  min-height: 125.1vh;
 }
 
 .three-features {
