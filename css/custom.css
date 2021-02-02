@@ -231,6 +231,18 @@ transform: translateY(2px);
   .card-body {
     text-align: center;
   }
+  .navbar {
+    background-color: white;
+  }
+  .nav-link {
+    color: #4f4f4f !important;
+  }
+  .fa-bars{
+    color: #4f4f4f !important;
+  }
+  .logo {
+    color: #0054A6 !important;
+  }
 }
 
 .quote {
@@ -251,16 +263,19 @@ transform: translateY(2px);
 .payments-head {
   background-image: url('../img/Payments_Page.png');
   background-size: cover;
+  min-height: 50%;
 }
 
 .loans-head {
   background-image: url('../img/Loan_Page.png');
   background-size: cover;
+  min-height: 50%;
 }
 
 .pos-head {
   background-image: url('../img/POS_Page.png');
   background-size: cover;
+  min-height: 50%;
 }
 
 .footer {
