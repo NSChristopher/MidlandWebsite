@@ -11,7 +11,7 @@ body {
 
 .jumbotron-heading {
   font-weight: 900;
-  
+  font-size: 32pt;
 }
 
 .Jumbotron-sub-heading {
@@ -67,6 +67,7 @@ body {
 .bg-image {
   background-position: center;
 }
+
 
 /* Buttons */
 
@@ -149,8 +150,8 @@ transform: translateY(2px);
   }
 
 .slant-container {
-  padding-top: 7%;
-  padding-bottom: 7%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   transform: skewY(3.33deg);
   position: relative;
   width: 100%;
@@ -175,6 +176,9 @@ transform: translateY(2px);
 
 .vh-50 {
   min-height: 50.1vh;
+}
+.vh-5 {
+  min-height: 5.1vh;
 }
 .vh-15 {
   min-height: 15.1vh;
@@ -249,9 +253,10 @@ transform: translateY(2px);
   background-color: #0054A6;
 }
 
-.pos-artical {
+.pos-btm-article {
   background-image: url('../img/AbstractWhiteBg.jpeg');
   background-size: cover;
+  overflow: visible;
 }
 
 .pos-features {
@@ -271,7 +276,6 @@ transform: translateY(2px);
   background-size: cover;
   min-height: 50%;
 }
-
 .pos-head {
   background-image: url('../img/POS_Page.png');
   background-size: cover;
@@ -287,6 +291,14 @@ transform: translateY(2px);
 }
 .customer-logo {
   filter: opacity(60%);
+}
+
+.about {
+  padding-top: 5%;
+}
+
+.customerinfoform {
+  background-color: #0054A6;
 }
 
 /* Featurett Divider */
