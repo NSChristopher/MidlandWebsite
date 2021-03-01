@@ -44,7 +44,7 @@ body {
 }
 
  .inherit-style:active {
-  color: grey;
+  color: inherit;
 }
 
 /* Cards */
@@ -310,9 +310,9 @@ transform: translateY(2px);
 /* Nav Bar */
 
 .navbar {
-    /* border-bottom: solid;
-    border-width: 1px;
-    border-color: rgba(187, 188, 255, 0.096); */
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(187, 188, 255, 0.096);
     /* backdrop-filter: blur(4px); */
 }
 .logo {
