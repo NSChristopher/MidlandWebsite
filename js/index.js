@@ -1,52 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
 
-import 'css/custom.css';
+  const formData = new FormData(e.target);
 
-(() => {
-  'use strict';
+  const {isDataValid, statusMessage} = validateForm();
 
-  const forms = document.querySelectorAll('.needs-validation');
+  if (!isDataValid) {
+    document.getElementById('status').innerHTML = statusMessage;
+    return;
+  }
 
-  Array.prototype.slice.call(forms).forEach((form) => {
-    form.addEventListener('submit', (event) => {
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add('was-validated');
-    }, false);
+  fetch('mail.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then((response) => {
+    response.json();
+  })
+  .then((response) => {
+    if (response.code) {
+      // If mail was sent successfully, reset the form;
+      const values = document.querySelectorAll('.form-control');
+      values.forEach( value => {
+        value.textContent = '';
+      });
+
+      document.getElementById('status').innerHTML = `<p class="note note-success">${response.message}</p>`;
+      setTimeout(()=> {
+        document.getElementById('status').innerHTML = '';
+      }, 2000)
+    } else {
+      document.getElementById('status').innerHTML = `<p class="note note-danger">${response.message}</p>`;
+    }
+  })
+  .catch((err) => {
+    document.getElementById('status').innerHTML = `<p class="note note-danger">An unexpected error occured. Please try again</p>`;
   });
-})();
-
-function FadeInSection(props) {
-  const [isVisible, setVisible] = React.useState(false);
-  const domRef = React.useRef();
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting));
-    });
-    observer.observe(domRef.current);
-  }, []);
-  return (
-    <div
-      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
-      ref={domRef}
-    >
-      {props.children}
-    </div>
-  );
-}
-
-function App() {
-  return (
-    <div className="App">
-        <FadeInSection>
-        <h3 class="mb-3">Advanced POS Systems</h3>
-        </FadeInSection>
-    </div>
-  );
-}
-
-const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+});
