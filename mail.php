@@ -41,7 +41,7 @@ if ($message === '') {
 }
 
 $content    = "From: $name \n Email: $email \n Message: $message";
-$recipient  = "noahschristopher250@gmail.com";
+$recipient  = "youremail@here.com";
 
 $mailheader = array(
   'From' => $email,
