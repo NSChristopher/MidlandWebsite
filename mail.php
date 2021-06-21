@@ -1,8 +1,8 @@
 <?php
 $name    = (isset($_POST['name'])) ? $_POST['name'] : '';
 $email   = (isset($_POST['email'])) ? $_POST['email'] : '';
-$message = (isset($_POST['message'])) ? $_POST['message'] : '';
 $subject = (isset($_POST['subject'])) ? $_POST['subject'] : '';
+$message = (isset($_POST['message'])) ? $_POST['message'] : '';
 
 header('Content-Type: application/json');
 if ($name === '') {
@@ -41,7 +41,7 @@ if ($message === '') {
 }
 
 $content    = "From: $name \n Email: $email \n Message: $message";
-$recipient  = "noahschristopher250@gmail.com";
+$recipient  = "noah@cardpaymentsolutions.com";
 
 $mailheader = array(
   'From' => $email,
