@@ -19,11 +19,10 @@ Email: {$_POST['email']}
 Name: {$_POST['name']}
 Message: {$_POST['message']}
 EOT;
-
-if (!$mail->send()) {
-  echo 'Mailer Error: ' . $mail->ErrorInfo;
+        if (!$mail->send()) {
+    $msg = 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-  echo 'The email message was sent.';
+  $msg = 'The email message was sent.';
 }
 ?>
 
