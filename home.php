@@ -78,8 +78,7 @@
                 <div class="col-md-5 col-lg-5 pb-3 px-5 px-md-3">
                   <div class="pt-5 pb-3">
                     <a href="tel:9172546874">
-                      <button type="button" class="phone-call"><img src="https://cdn2.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-whatsapp-circle-512.png" width="50" alt="Call Now" title="Call Now"></button>
-                    </a>
+                      <div class="phone-call"><img src="https://cdn2.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-whatsapp-circle-512.png" width="50" alt="Call Now" title="Call Now"></div>                    </a>
                     <a href="about">
                       <button type="button" class="btn btn-outline-light btn-rounded">More Info</button>
                     </a>
