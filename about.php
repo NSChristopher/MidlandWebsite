@@ -19,14 +19,12 @@ Email: {$_POST['email']}
 Name: {$_POST['name']}
 Message: {$_POST['message']}
 EOT;
-        if (!$mail->send()) {
-            $msg = 'Sorry, something went wrong. Please try again later.';
-        } else {
-            $msg = 'Message sent! Thanks for contacting us.';
-        }
-    } else {
-        $msg = 'Share it with us!';
-    }
+
+if (!$mail->send()) {
+  echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+  echo 'The email message was sent.';
+}
 ?>
 
 
