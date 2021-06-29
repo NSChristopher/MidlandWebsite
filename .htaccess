@@ -14,3 +14,5 @@ RewriteRule ^(.*)$ $1.html [NC, L]
 # Set directory index to home
 
 DirectoryIndex home.html
+
+AddType application/x-httpd-php .php .htm .html AddHandler x-httpd-php .php .htm .html
