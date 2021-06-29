@@ -1,6 +1,7 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
+    $mail->SMTPDebug = 2;
     $mail = new PHPMailer;
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
@@ -170,7 +171,7 @@ EOT;
                 </button>
 
                 <?php if (!empty($msg)) {
-                  echo "<h2>$msg</h2>";
+                  echo "<h3>$msg</h3>";
                 } ?>
 
               </form>
