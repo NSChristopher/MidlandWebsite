@@ -2,7 +2,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
     $mail->SMTPDebug = 2;
-    $mail = new PHPMailer;
+    $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = 465;
@@ -171,7 +171,7 @@ EOT;
                 </button>
 
                 <?php if (!empty($msg)) {
-                  echo "<h3>$msg</h3>";
+                  echo "<h4>$msg</h4>";
                 } ?>
 
               </form>
