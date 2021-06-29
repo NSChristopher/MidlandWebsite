@@ -18,9 +18,9 @@ require 'vendor/autoload.php';
         $mail->Subject = ' | Website Contact';
         $mail->isHTML(false);
         $mail->Body = <<<EOT
-Email: {$_POST['email']}
-Name: {$_POST['name']}
-Message: {$_POST['message']}
+        Email: {$_POST['email']}
+        Name: {$_POST['name']}
+        Message: {$_POST['message']}
         EOT;
         if (!$mail->send()) {
             $msg = 'Mailer Error: ' . $mail->ErrorInfo;
