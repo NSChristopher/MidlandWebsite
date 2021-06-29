@@ -23,7 +23,7 @@ require 'vendor/autoload.php';
         Message: {$_POST['message']}
         EOT;
         if (!$mail->send()) {
-            $msg = 'Mailer Error: ' . $mail->ErrorInfo;
+            $msg = 'Sorry there was an issue. please try again later.';
         } else {
             $msg = 'Message sent! Thanks for contacting us.';
         }
