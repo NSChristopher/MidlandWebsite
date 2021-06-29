@@ -11,7 +11,7 @@ require 'vendor/autoload.php';
     $mail->Port = 587;
 
     $mail->Username = 'platinumpayrol@gmail.com';
-    $mail->Password = 'PLAT1007';
+    $mail->Password = 'uetsnvrihifjbdcc';
     $mail->setFrom('midlandpaymentservices@gmail.com', 'Gus Prentzas');
     $mail->addAddress('noahschristopher250@gmail.com', 'Receiver Name');
     if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
