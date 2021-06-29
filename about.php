@@ -2,7 +2,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
     $mail->SMTPDebug = 2;
-    $mail = new PHPMailer(true);
+    $mail = new PHPMailer;
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = 465;
@@ -19,11 +19,11 @@ Email: {$_POST['email']}
 Name: {$_POST['name']}
 Message: {$_POST['message']}
 EOT;
-        if (!$mail->send()) {
-    $msg = 'Mailer Error: ' . $mail->ErrorInfo;
-} else {
-  $msg = 'The email message was sent.';
-}
+    if (!$mail->send()) {
+      $msg = 'Mailer Error: ' . $mail->ErrorInfo;
+    } else {
+      $msg = 'The email message was sent.';
+    }
 ?>
 
 
