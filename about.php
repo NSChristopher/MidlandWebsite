@@ -2,9 +2,12 @@
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
 <<<<<<< HEAD
+<<<<<<< HEAD
     $mail->SMTPDebug = 2;
     $mail = new PHPMailer(true);
 =======
+=======
+>>>>>>> parent of 06aba96 (debug)
     $mail = new PHPMailer;
 >>>>>>> parent of 06aba96 (debug)
     $mail->isSMTP();
@@ -176,7 +179,11 @@ EOT;
 
                 <?php if (!empty($msg)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                   echo "<h4>$msg</h4>";
+=======
+                  echo "<h2>$msg</h2>";
+>>>>>>> parent of 06aba96 (debug)
 =======
                   echo "<h2>$msg</h2>";
 >>>>>>> parent of 06aba96 (debug)
