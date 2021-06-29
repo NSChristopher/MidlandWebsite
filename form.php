@@ -15,11 +15,12 @@ require 'vendor/autoload.php';
     $mail->setFrom('midlandpaymentservices@gmail.com', 'Gus Prentzas');
     $mail->addAddress('noahschristopher250@gmail.com', 'Receiver Name');
     if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
+        $mail->Subject = ' | Website Contact';
         $mail->isHTML(false);
         $mail->Body = <<<EOT
-Email: {$_POST['email']}
-Name: {$_POST['name']}
-Message: {$_POST['message']}
+        Email: {$_POST['email']}
+        Name: {$_POST['name']}
+        Message: {$_POST['message']}
         EOT;
         if (!$mail->send()) {
             $msg = 'Mailer Error: ';
