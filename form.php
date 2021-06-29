@@ -1,11 +1,11 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
-    $mail = new PHPMailer();  // create a new object
-    $mail->IsSMTP(); // enable SMTP
-    $mail->SMTPDebug = 2;  // debugging: 1 = errors and messages, 2 = messages only
-    $mail->SMTPAuth = true;  // authentication enabled
-    $mail->SMTPSecure = 'tls'; // secure transfer enabled REQUIRED for GMail
+    $mail = new PHPMailer();
+    $mail->IsSMTP();
+    $mail->SMTPDebug = 2;
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = 'tls';
     $mail->SMTPAutoTLS = false;
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = 587;
@@ -18,9 +18,9 @@ require 'vendor/autoload.php';
         $mail->Subject = {$_POST['email']} . ' | Website Contact';
         $mail->isHTML(false);
         $mail->Body = <<<EOT
-        Email: {$_POST['email']}
-        Name: {$_POST['name']}
-        Message: {$_POST['message']}
+    Email: {$_POST['email']}
+    Name: {$_POST['name']}
+    Message: {$_POST['message']}
         EOT;
         if (!$mail->send()) {
             $msg = 'Mailer Error: ';
