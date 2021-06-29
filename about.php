@@ -25,7 +25,7 @@ require 'vendor/autoload.php';
         if (!$mail->send()) {
             $msg = 'Sorry there was an issue! Please try again later.';
         } else {
-            $msg = 'Message sent. Thanks for contacting us.';
+            $msg = 'Message sent! Thanks for contacting us.';
         }
     } else {
         $msg = 'Share it with us!';
