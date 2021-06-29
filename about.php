@@ -20,10 +20,13 @@ Name: {$_POST['name']}
 Message: {$_POST['message']}
 EOT;
         if (!$mail->send()) {
-    $msg = echo 'Mailer Error: ' . $mail->ErrorInfo;
-} else {
-   $msg = echo 'The email message was sent.';
-}
+            $msg = 'Sorry, something went wrong. Please try again later.';
+        } else {
+            $msg = 'Message sent! Thanks for contacting us.';
+        }
+    } else {
+        $msg = 'Share it with us!';
+    }
 ?>
 
 
