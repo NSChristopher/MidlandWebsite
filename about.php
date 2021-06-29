@@ -1,8 +1,12 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
+<<<<<<< HEAD
     $mail->SMTPDebug = 2;
     $mail = new PHPMailer(true);
+=======
+    $mail = new PHPMailer;
+>>>>>>> parent of 06aba96 (debug)
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = 465;
@@ -171,7 +175,11 @@ EOT;
                 </button>
 
                 <?php if (!empty($msg)) {
+<<<<<<< HEAD
                   echo "<h4>$msg</h4>";
+=======
+                  echo "<h2>$msg</h2>";
+>>>>>>> parent of 06aba96 (debug)
                 } ?>
 
               </form>
