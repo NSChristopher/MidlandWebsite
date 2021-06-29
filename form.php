@@ -11,11 +11,11 @@ require 'vendor/autoload.php';
     $mail->Port = 587;
 
     $mail->Username = 'platinumpayrol@gmail.com';
-    $mail->Password = 'PLAT1007';
-    $mail->setFrom('midlandpaymentservices@gmail.com', 'Gus Prentzas');
+    $mail->Password = 'uetsnvrihifjbdcc';
+    $mail->setFrom('noah@cardpaymentsolutions.com', 'Gus Prentzas');
     $mail->addAddress('noahschristopher250@gmail.com', 'Receiver Name');
     if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
-        $mail->Subject = ' | Website Contact';
+        $mail->Subject = $_POST['subject'] . ' | Website Contact';
         $mail->isHTML(false);
         $mail->Body = <<<EOT
         Email: {$_POST['email']}
