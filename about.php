@@ -131,7 +131,7 @@
                   <label class="form-label" for="message">Message</label>
                 </div>
                 
-                <button id="custom-validation-button" type="submit" Value="Send" class="btn btn-primary btn-block mb-4">
+                <button id="custom-validation-button" type="submit" Value="Send" name="send" class="btn btn-primary btn-block mb-4">
                   Send
                 </button>
 
