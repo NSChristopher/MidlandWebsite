@@ -1,41 +1,26 @@
-window.onbeforeunload = () => {
-    for(const form of document.getElementsByTagName('form')) {
-      form.reset();
-    }
+$("#submit").click(function(e){
+  
+  jQuery.post("form.php", {
+  
+  name:$("#name").val(),
+  email:$("#email").val(),
+  subject:$("#subject").val(),
+  message:$("#message").val(),
+  
+  
+  },  function(data, textStatus){
+  
+  if( data == 1)
+  {
+  alert("Mail not sent");
+  e.preventDefault(); 
   }
-
-
-const constraints = {
-    name: {
-        presence: { allowEmpty: false }
-    },
-    email: {
-        presence: { allowEmpty: false },
-        email: true
-    },
-    message: {
-        presence: { allowEmpty: false }
-    }
-};
-
-const form = document.getElementById('form');
-
-form.addEventListener('submit', function (event) {
-  const formValues = {
-      name: form.elements.name.value,
-      email: form.elements.email.value,
-      message: form.elements.message.value
-  };
-
-  const errors = validate(formValues, constraints);
-
-  if (errors) {
-    event.preventDefault();
-    const errorMessage = Object
-        .values(errors)
-        .map(function (fieldValues) { return fieldValues.join(', ')})
-        .join("\n");
-
-    alert(errorMessage);
+  else
+  {
+  alert("Mail sent");
+  e.preventDefault(); 
   }
-}, false);
+  
+  });
+  
+  });
