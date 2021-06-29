@@ -1,37 +1,3 @@
-<?php
-use PHPMailer\PHPMailer\PHPMailer;
-require 'vendor/autoload.php';
-    $mail = new PHPMailer();
-    $mail->IsSMTP();
-    $mail->SMTPDebug = 2;
-    $mail->SMTPAuth = true;
-    $mail->SMTPSecure = 'tls';
-    $mail->SMTPAutoTLS = false;
-    $mail->Host = 'smtp.gmail.com';
-    $mail->Port = 587;
-
-    $mail->Username = 'platinumpayrol@gmail.com';
-    $mail->Password = 'uetsnvrihifjbdcc';
-    $mail->setFrom('noah@cardpaymentsolutions.com', 'Gus Prentzas');
-    $mail->addAddress('noahschristopher250@gmail.com', 'Receiver Name');
-    if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
-        $mail->Subject = $_POST['subject'] . ' | Website Contact';
-        $mail->isHTML(false);
-        $mail->Body = <<<EOT
-        Email: {$_POST['email']}
-        Name: {$_POST['name']}
-        Message: {$_POST['message']}
-        EOT;
-        if (!$mail->send()) {
-            $msg = 'Sorry there was an issue. Please try again later.';
-        } else {
-            $msg = 'Message sent! Thanks for contacting us.';
-        }
-    } else {
-        $msg = 'Share it with us!';
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -142,7 +108,7 @@ require 'vendor/autoload.php';
 
             <div class="col-md-6 mb-4">
 
-              <form name="form" method="POST">
+              <form name="form"  action="form.php" method="POST">
                 <h2>Contact us</h2>
 
                 <div class="form-outline mb-4">
