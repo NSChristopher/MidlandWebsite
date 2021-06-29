@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
     $mail->SMTPDebug = 2;
     $mail = new PHPMailer;
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = 'ssl://smtp.gmail.com';
     $mail->Port = 465;
     $mail->SMTPAuth = true;
     $mail->Username = 'platinumpayrol@gmail.com';
@@ -21,6 +21,7 @@ Message: {$_POST['message']}
 EOT;
         if (!$mail->send()) {
             $msg = 'Mailer Error: ' . $mail->ErrorInfo;
+            echo !extension_loaded('openssl')?"Not Available":"Available";
         } else {
             $msg = 'Message sent! Thanks for contacting us.';
         }
