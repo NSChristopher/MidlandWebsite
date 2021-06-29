@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -108,7 +108,7 @@
 
             <div class="col-md-6 mb-4">
 
-              <form name="form" method="POST">
+              <form name="form" action="form.php" method="POST">
                 <h2>Contact us</h2>
 
                 <div class="form-outline mb-4">
