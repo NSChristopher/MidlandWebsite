@@ -6,7 +6,7 @@ require 'vendor/autoload.php';
     $mail->Host = 'smtp.hostinger.com';
     $mail->Port = 465;
     $mail->SMTPAuth = true;
-    $mail->Username = 'info@midlandpaymentssolutions.com';
+    $mail->Username = 'info@midlandpaymentsservices.com';
     $mail->Password = 'ixLD47WSu6M!v%Lp';
     $mail->setFrom('test@hostinger-tutorials.com', 'Mr. Drago');
     $mail->addAddress('example@gmail.com', 'Receiver Name');
