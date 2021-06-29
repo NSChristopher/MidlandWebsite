@@ -23,7 +23,7 @@ Name: {$_POST['name']}
 Message: {$_POST['message']}
         EOT;
         if (!$mail->send()) {
-            $msg = 'Mailer Error: ';
+            $msg = 'Mailer Error: ' . $mail->ErrorInfo;
         } else {
             $msg = 'Message sent! Thanks for contacting us.';
         }
