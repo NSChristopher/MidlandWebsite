@@ -15,7 +15,6 @@ require 'vendor/autoload.php';
     $mail->setFrom('midlandpaymentservices@gmail.com', 'Gus Prentzas');
     $mail->addAddress('noahschristopher250@gmail.com', 'Receiver Name');
     if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
-        $mail->Subject = ' | Website Contact';
         $mail->isHTML(false);
         $mail->Body = <<<EOT
 Email: {$_POST['email']}
