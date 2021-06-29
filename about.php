@@ -142,7 +142,7 @@ Message: {$_POST['message']}
 
             <div class="col-md-6 mb-4">
 
-              <form name="form" action="form.php" method="POST">
+              <form name="form" method="POST">
                 <h2>Contact us</h2>
 
                 <div class="form-outline mb-4">
