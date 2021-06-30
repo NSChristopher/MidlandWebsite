@@ -143,12 +143,12 @@
                 </div>
 
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="email">Email address</label>
                   <input
                     type="email" 
                     name="email"
                     class="form-control"
                   />
+                  <label class="form-label" for="email">Email address</label>
                 </div>
 
                 <div class="form-outline mb-4">
