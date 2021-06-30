@@ -138,6 +138,7 @@
                   <input 
                     type="text"
                     name="name"
+                    class="form-control"
                   />
                 </div>
 
@@ -146,6 +147,7 @@
                   <input
                     type="email" 
                     name="email"
+                    class="form-control"
                   />
                 </div>
 
@@ -154,6 +156,7 @@
                   <input
                     type="text" 
                     name="subject"
+                    class="form-control"
                   />
                 </div>
 
@@ -163,6 +166,7 @@
                     type="text"
                     name="message" 
                     rows="4"
+                    class="form-control"
                   ></textarea>
                 </div>
                 
