@@ -22,7 +22,6 @@
   <link rel="stylesheet" href="css/mdb.min.css" />
   <!-- Custom styles -->
   <link rel="stylesheet" href="css/custom.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -108,7 +107,7 @@
 
             <div class="col-md-6 mb-4">
 
-              <form name="form" action="form.php" method="POST">
+              <form id="contact-form" name="form" action="form.php" method="POST">
                 <h2>Contact us</h2>
 
                 <div class="form-outline mb-4">
@@ -131,7 +130,7 @@
                   <label class="form-label" for="message">Message</label>
                 </div>
                 
-                <button id="custom-validation-button" type="submit" Value="Send" name="send" class="btn btn-primary btn-block mb-4">
+                <button type="submit" name="send" Value="Submit" class="btn btn-primary btn-block mb-4">
                   Send
                 </button>
 
@@ -185,5 +184,6 @@
 <script type="text/javascript" language="javascript" src="js/mdb.min.js"></script>
 <!-- Custom scripts -->
 <script type="text/javascript" language="javascript" src="js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </html>
