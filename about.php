@@ -134,12 +134,12 @@
                 <h2>Contact us</h2>
 
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="name">Name</label>
                   <input 
                     type="text"
                     name="name"
                     class="form-control"
                   />
+                  <label class="form-label" for="name">Name</label>
                 </div>
 
                 <div class="form-outline mb-4">
@@ -152,22 +152,22 @@
                 </div>
 
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="subject">Subject</label>
                   <input
                     type="text" 
                     name="subject"
                     class="form-control"
                   />
+                  <label class="form-label" for="subject">Subject</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="message">Message</label>
                   <textarea 
                     type="text"
                     name="message" 
                     rows="4"
                     class="form-control"
                   ></textarea>
+                  <label class="form-label" for="message">Message</label>
                 </div>
                 
                 <button 
