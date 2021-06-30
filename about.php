@@ -24,26 +24,27 @@
   <link rel="stylesheet" href="css/custom.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script>
-      $(function () {
+  <script type="text/javascript" language="javascript" src="js/index.js"></script>
+  <script>
+    $(function () {
 
-        $('form').on('submit', function (e) {
+      $('form').on('submit', function (e) {
 
-          e.preventDefault();
+        e.preventDefault();
 
-          $.ajax({
-            type: 'post',
-            url: 'form.php',
-            data: $('form').serialize(),
-            success: function () {
-              alert('form was submitted');
-            }
-          });
-
+        $.ajax({
+          type: 'post',
+          url: 'form.php',
+          data: $('form').serialize(),
+          success: function () {
+            alert('form was submitted');
+          }
         });
 
       });
-    </script>
+
+    });
+  </script>
 </head>
 
 <body>
@@ -133,26 +134,44 @@
                 <h2>Contact us</h2>
 
                 <div class="form-outline mb-4">
-                  <input type="text" name="name" class="form-control" required/>
                   <label class="form-label" for="name">Name</label>
+                  <input 
+                    type="text"
+                    name="name"
+                  />
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="email" name="email" class="form-control" required/>
                   <label class="form-label" for="email">Email address</label>
+                  <input
+                    type="email" 
+                    name="email"
+                  />
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="text" name="subject" class="form-control" required/>
                   <label class="form-label" for="subject">Subject</label>
+                  <input
+                    type="text" 
+                    name="subject"
+                  />
                 </div>
 
                 <div class="form-outline mb-4">
-                  <textarea class="form-control" name="message" rows="4"></textarea>
                   <label class="form-label" for="message">Message</label>
+                  <textarea 
+                    type="text"
+                    name="message" 
+                    rows="4"
+                  ></textarea>
                 </div>
                 
-                <button type="submit" name="send" Value="Submit" class="btn btn-primary btn-block mb-4">
+                <button 
+                  type="submit" 
+                  name="send" 
+                  Value="Submit" 
+                  class="btn btn-primary btn-block mb-4"
+                >
                   Send
                 </button>
 
