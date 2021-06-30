@@ -28,10 +28,10 @@
     $(document).ready(function () {
     $("form").submit(function (event) {
       var formData = {
-        name: $("name").val(),
-        email: $("email").val(),
-        subject: $("subject").val(),
-        message: $("message").val(),
+        name: $("#name").val(),
+        email: $("#email").val(),
+        subject: $("#subject").val(),
+        message: $("#message").val(),
       };
   
       $.ajax({
@@ -140,6 +140,7 @@
                   <input 
                     type="text"
                     name="name"
+                    id="name"
                     class="form-control"
                   />
                   <label class="form-label" for="name">Name</label>
@@ -149,6 +150,7 @@
                   <input
                     type="email" 
                     name="email"
+                    id="email"
                     class="form-control"
                   />
                   <label class="form-label" for="email">Email address</label>
@@ -158,6 +160,7 @@
                   <input
                     type="text" 
                     name="subject"
+                    id="subject"
                     class="form-control"
                   />
                   <label class="form-label" for="subject">Subject</label>
@@ -167,6 +170,7 @@
                   <textarea 
                     type="text"
                     name="message" 
+                    id="message"
                     rows="4"
                     class="form-control"
                   ></textarea>
