@@ -155,7 +155,6 @@
                   <input
                     type="text" 
                     name="subject"
-                    class="form-control"
                   />
                   <label class="form-label" for="subject">Subject</label>
                 </div>
@@ -165,7 +164,6 @@
                     type="text"
                     name="message" 
                     rows="4"
-                    class="form-control"
                   ></textarea>
                   <label class="form-label" for="message">Message</label>
                 </div>
