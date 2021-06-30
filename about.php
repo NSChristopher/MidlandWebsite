@@ -133,7 +133,7 @@
 
             <div class="col-md-6 mb-4">
 
-              <form id="contact-form" name="form" action="form.php" method="POST">
+              <form id="form" name="form" action="form.php" method="POST">
                 <h2>Contact us</h2>
 
                 <div class="form-outline mb-4">
