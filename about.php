@@ -33,7 +33,7 @@
 
           $.ajax({
             type: 'post',
-            url: 'post.php',
+            url: 'form.php',
             data: $('form').serialize(),
             success: function () {
               alert('form was submitted');
