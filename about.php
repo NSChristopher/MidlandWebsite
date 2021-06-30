@@ -25,6 +25,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script type="text/javascript" language="javascript" src="js/form.js"></script>
+  <script>
+    $(document).ready(function () {
+    $("form").submit(function (event) {
+      var formData = {
+        name: $("#name").val(),
+        email: $("#email").val(),
+        subject: $("#subject").val(),
+        message: $("#message").val(),
+      };
+  
+      $.ajax({
+        type: "POST",
+        url: "form.php",
+        data: formData,
+        dataType: "json",
+        encode: true,
+      }).done(function (data) {
+        console.log(data);
+      });
+  
+      event.preventDefault();
+    });
+  });
+  </script>
 </head>
 
 <body>
