@@ -24,7 +24,6 @@
   <link rel="stylesheet" href="css/custom.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script type="text/javascript" language="javascript" src="js/form.js"></script>
   <script>
     $(document).ready(function () {
     $("form").submit(function (event) {
