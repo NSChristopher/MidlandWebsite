@@ -50,8 +50,8 @@
         if (!data.success) {
           if (data.errors.name) {
             $("#name-group").addClass("has-error");
-            $('<div class="help-block">' + data.errors.name + "</div>").insertBefore("#name-group"
-              
+            $("#name-group").prepend(
+              '<div class="help-block">' + data.errors.name + "</div>"
             );
           }
 
