@@ -49,8 +49,8 @@
 
         if (!data.success) {
           if (data.errors.name) {
-            $("name-group").addClass("has-error");
-            $("name-group").append(
+            $("#name-group").addClass("has-error");
+            $("#name-group").append(
               '<div class="help-block">' + data.errors.name + "</div>"
             );
           }
@@ -167,7 +167,7 @@
               <form id="form" name="form" action="form.php" method="POST">
                 <h2>Contact us</h2>
 
-                <div class="form-outline mb-4" name="name-group">
+                <div id="name-group" class="form-outline mb-4">
                   <input 
                     type="text"
                     name="name"
