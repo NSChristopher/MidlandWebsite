@@ -67,13 +67,15 @@
                       $("#subject-group").prepend(
                         '<div class="warning">' + data.errors.subject + "</div>"
                       );
+                    }
 
-                      if (data.errors.superheroAlias) {
-                        $("#message-group").addClass("has-error");
-                        $("#message-group").prepend(
-                          '<div class="warning">' + data.errors.message + "</div>"
-                        );
-                      }
+                    if (data.errors.superheroAlias) {
+                      $("#message-group").addClass("has-error");
+                      $("#message-group").prepend(
+                        '<div class="warning">' + data.errors.message + "</div>"
+                      );
+                    }
+                    
                     } else {
                       $("form").html(
                         '<div class="alert alert-success">' + data.message + "</div>"
