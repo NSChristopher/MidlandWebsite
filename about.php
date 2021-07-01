@@ -51,7 +51,7 @@
                     if (data.errors.name) {
                       $("#name-group").addClass("has-error");
                       $("#name-group").prepend(
-                        '<div class="help-block alert alert-danger">' + data.errors.name + "</div>"
+                        '<div class="help-block text-alert-success">' + data.errors.name + "</div>"
                       );
                     }
 
