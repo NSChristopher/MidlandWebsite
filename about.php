@@ -58,18 +58,18 @@
                     if (data.errors.email) {
                       $("#email-group").addClass("has-error");
                       $("#email-group").prepend(
-                        '<div class="warning">' + data.errors.email + "</div>"
+                        '<div class="warning alert-fail">' + data.errors.email + "</div>"
                       );
                     }
 
-                    if (data.errors.superheroAlias) {
+                    if (data.errors.subject) {
                       $("#subject-group").addClass("has-error");
                       $("#subject-group").prepend(
                         '<div class="warning">' + data.errors.subject + "</div>"
                       );
                     }
 
-                    if (data.errors.superheroAlias) {
+                    if (data.errors.message) {
                       $("#message-group").addClass("has-error");
                       $("#message-group").prepend(
                         '<div class="warning">' + data.errors.message + "</div>"
@@ -197,6 +197,7 @@
                     <label class="form-label" for="message">Message</label>
                   </div>
                 </div>
+
                 <button type="submit" name="send" Value="Submit" class="btn btn-primary btn-block mb-4">
                   Send
                 </button>
