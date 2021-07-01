@@ -51,27 +51,27 @@
                     if (data.errors.name) {
                       $("#name-group").addClass("has-error");
                       $("#name-group").prepend(
-                        '<div class="help-block">' + data.errors.name + "</div>"
+                        '<div class="warning">' + data.errors.name + "</div>"
                       );
                     }
 
                     if (data.errors.email) {
                       $("email-group").addClass("has-error");
                       $("email-group").prepend(
-                        '<div class="help-block">' + data.errors.email + "</div>"
+                        '<div class="warning">' + data.errors.email + "</div>"
                       );
                     }
 
                     if (data.errors.superheroAlias) {
                       $("subject-group").addClass("has-error");
                       $("subject-group").prepend(
-                        '<div class="help-block">' + data.errors.subject + "</div>"
+                        '<div class="warning">' + data.errors.subject + "</div>"
                       );
 
                       if (data.errors.superheroAlias) {
                         $("message-group").addClass("has-error");
                         $("message-group").prepend(
-                          '<div class="help-block">' + data.errors.message + "</div>"
+                          '<div class="warning">' + data.errors.message + "</div>"
                         );
                       }
                     } else {
