@@ -56,21 +56,21 @@
                     }
 
                     if (data.errors.email) {
-                      $("email-group").addClass("has-error");
-                      $("email-group").prepend(
+                      $("#email-group").addClass("has-error");
+                      $("#email-group").prepend(
                         '<div class="warning">' + data.errors.email + "</div>"
                       );
                     }
 
                     if (data.errors.superheroAlias) {
-                      $("subject-group").addClass("has-error");
-                      $("subject-group").prepend(
+                      $("#subject-group").addClass("has-error");
+                      $("#subject-group").prepend(
                         '<div class="warning">' + data.errors.subject + "</div>"
                       );
 
                       if (data.errors.superheroAlias) {
-                        $("message-group").addClass("has-error");
-                        $("message-group").prepend(
+                        $("#message-group").addClass("has-error");
+                        $("#message-group").prepend(
                           '<div class="warning">' + data.errors.message + "</div>"
                         );
                       }
