@@ -27,6 +27,9 @@
   <script>
     $(document).ready(function () {
     $("form").submit(function (event) {
+      $(".form-group").removeClass("has-error");
+      $(".help-block").remove();
+      
       var formData = {
         name: $("#name").val(),
         email: $("#email").val(),
