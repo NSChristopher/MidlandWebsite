@@ -24,7 +24,7 @@ if (!empty($errors)) {
     $data['errors'] = $errors;
 } else {
     $data['success'] = true;
-    $data['message'] = 'Success!';
+    $data['message'] = 'Email sent!';
 }
 
 echo json_encode($data);
