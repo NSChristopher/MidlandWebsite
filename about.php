@@ -168,7 +168,6 @@
                     name="name"
                     id="name"
                     class="form-control"
-                    required
                   />
                   <label class="form-label" for="name">Name</label>
                 </div>
@@ -179,7 +178,6 @@
                     name="email"
                     id="email"
                     class="form-control"
-                    required
                   />
                   <label class="form-label" for="email">Email address</label>
                 </div>
@@ -190,7 +188,6 @@
                     name="subject"
                     id="subject"
                     class="form-control"
-                    required
                   />
                   <label class="form-label" for="subject">Subject</label>
                 </div>
@@ -202,7 +199,6 @@
                     id="message"
                     rows="4"
                     class="form-control"
-                    required
                   ></textarea>
                   <label class="form-label" for="message">Message</label>
                 </div>
@@ -215,6 +211,10 @@
                 >
                   Send
                 </button>
+
+                <?php if (!empty($msg)) {
+                  echo "<h4>$msg</h4>";
+                } ?>
 
               </form>
 
