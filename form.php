@@ -28,7 +28,9 @@ if (!empty($errors)) {
 }
 
 echo json_encode($data);
+?>
 
+<?php
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
     $mail = new PHPMailer();
