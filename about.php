@@ -25,65 +25,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 
-  <script>
-    $(document).ready(function() {
-          $("form").submit(function(event) {
-              $(".form-group").removeClass("has-error");
-              $(".help-block").remove();
-
-              var formData = {
-                name: $("#name").val(),
-                email: $("#email").val(),
-                subject: $("#subject").val(),
-                message: $("#message").val(),
-              };
-
-              $.ajax({
-                type: "POST",
-                url: "form.php",
-                data: formData,
-                dataType: "json",
-                encode: true,
-              }).done(function(data) {
-                  console.log(data);
-
-                  if (!data.success) {
-                    if (data.errors.name) {
-                      $("#name-group").addClass("has-error");
-                      $("#name-group").prepend(
-                        '<div class="help-block text-danger text-left">' + data.errors.name + "</div>"
-                      );
-                    }
-
-                    if (data.errors.email) {
-                      $("#email-group").addClass("has-error");
-                      $("#email-group").prepend(
-                        '<div class="help-block text-danger text-left">' + data.errors.email + "</div>"
-                      );
-                    }
-
-                    if (data.errors.subject) {
-                      $("#subject-group").addClass("has-error");
-                      $("#subject-group").prepend(
-                        '<div class="help-block text-danger text-left">' + data.errors.subject + "</div>"
-                      );
-                    }
-
-                    if (data.errors.message) {
-                      $("#message-group").addClass("has-error");
-                      $("#message-group").prepend(
-                        '<div class="help-block text-danger text-left">' + data.errors.message + "</div>"
-                      );
-                    }
-                    } else {
-                      $("form").html(
-                        '<div class="alert alert-success">' + data.message + "</div>"
-                      );
-                    }
-                  }); event.preventDefault();
-              });
-          });
-  </script>
+  <script type="text/javascript" language="javascript" src="js/form.js"></script>
 
 </head>
 
