@@ -49,22 +49,22 @@
 
         if (!data.success) {
           if (data.errors.name) {
-            $("#name").addClass("has-error");
-            $("#name").append(
+            $("name").addClass("has-error");
+            $("name").append(
               '<div class="help-block">' + data.errors.name + "</div>"
             );
           }
 
           if (data.errors.email) {
-            $("#email").addClass("has-error");
-            $("#email").append(
+            $("email").addClass("has-error");
+            $("email").append(
               '<div class="help-block">' + data.errors.email + "</div>"
             );
           }
 
           if (data.errors.superheroAlias) {
-            $("#subject").addClass("has-error");
-            $("#subject").append(
+            $("subject").addClass("has-error");
+            $("subject").append(
               '<div class="help-block">' + data.errors.superheroAlias + "</div>"
             );
           }
