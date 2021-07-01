@@ -167,7 +167,8 @@
               <form id="form" name="form" action="form.php" method="POST">
                 <h2>Contact us</h2>
 
-                <div id="name-group" class="form-outline mb-4">
+                <div id="name-group">
+                <div class="form-outline mb-4">
                   <input 
                     type="text"
                     name="name"
@@ -176,6 +177,7 @@
                   />
                   <label class="form-label" for="name">Name</label>
                 </div>
+</div>
 
                 <div class="form-outline mb-4">
                   <input
