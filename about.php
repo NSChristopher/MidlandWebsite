@@ -176,20 +176,21 @@
                   </div>
                 </div>
 
-                <div>
+                <div id="email-group">
                   <div class="form-outline mb-4">
                     <input type="email" name="email" id="email" class="form-control" />
                     <label class="form-label" for="email">Email address</label>
                   </div>
                 </div>
 
-                <div>
+                <div id="subject-group">
                   <div class="form-outline mb-4">
                     <input type="text" name="subject" id="subject" class="form-control" />
                     <label class="form-label" for="subject">Subject</label>
                   </div>
                 </div>
-                <div>
+
+                <div id="message-group">
                   <div class="form-outline mb-4">
                     <textarea type="text" name="message" id="message" rows="4" class="form-control"></textarea>
                     <label class="form-label" for="message">Message</label>
