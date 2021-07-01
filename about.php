@@ -45,22 +45,22 @@
 
         if (!data.success) {
           if (data.errors.name) {
-            $("#name-group").addClass("has-error");
-            $("#name-group").append(
+            $("#name").addClass("has-error");
+            $("#name").append(
               '<div class="help-block">' + data.errors.name + "</div>"
             );
           }
 
           if (data.errors.email) {
-            $("#email-group").addClass("has-error");
-            $("#email-group").append(
+            $("#email").addClass("has-error");
+            $("#email").append(
               '<div class="help-block">' + data.errors.email + "</div>"
             );
           }
 
           if (data.errors.superheroAlias) {
-            $("#superhero-group").addClass("has-error");
-            $("#superhero-group").append(
+            $("#subject").addClass("has-error");
+            $("#subject").append(
               '<div class="help-block">' + data.errors.superheroAlias + "</div>"
             );
           }
