@@ -2,6 +2,33 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
+
+$errors = [];
+$data = [];
+
+if (empty($_POST['name'])) {
+    $errors['name'] = 'Name is required.';
+}
+
+if (empty($_POST['email'])) {
+    $errors['email'] = 'Email is required.';
+}
+
+if (empty($_POST['subject'])) {
+    $errors['subject'] = 'Subject is required.';
+}
+
+if (empty($_POST['message'])) {
+    $errors['message'] = 'message is required.';
+}
+
+if (!empty($errors)) {
+    $data['success'] = false;
+    $data['errors'] = $errors;
+} else {
+    $data['success'] = true;
+    $data['message'] = 'Success!';
+
     $mail = new PHPMailer();
     $mail->IsSMTP();
     $mail->SMTPDebug = 2;
@@ -32,31 +59,7 @@ require 'vendor/autoload.php';
         $msg = 'Share it with us!';
     }
 
-$errors = [];
-$data = [];
 
-if (empty($_POST['name'])) {
-    $errors['name'] = 'Name is required.';
-}
-
-if (empty($_POST['email'])) {
-    $errors['email'] = 'Email is required.';
-}
-
-if (empty($_POST['subject'])) {
-    $errors['subject'] = 'Subject is required.';
-}
-
-if (empty($_POST['message'])) {
-    $errors['message'] = 'message is required.';
-}
-
-if (!empty($errors)) {
-    $data['success'] = false;
-    $data['errors'] = $errors;
-} else {
-    $data['success'] = true;
-    $data['message'] = 'Success!';
 }
 
 echo json_encode($data);
