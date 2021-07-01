@@ -75,7 +75,6 @@
                         '<div class="warning">' + data.errors.message + "</div>"
                       );
                     }
-                    
                     } else {
                       $("form").html(
                         '<div class="alert alert-success">' + data.message + "</div>"
