@@ -21,8 +21,12 @@
   <!-- MDB -->
   <link rel="stylesheet" href="css/mdb.min.css" />
   <!-- Custom styles -->
-  <style></style>
   <link rel="stylesheet" href="css/custom.css" />
+
+  <!-- Custom js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" language="javascript" src="js/form.js"></script>
 </head>
 
 <body>
@@ -153,30 +157,38 @@
 
             <div class="col-md-6 mb-4">
 
-              <form name="form" action="form.php" method="POST">
+            <form id="form" name="form" action="form.php" method="POST">
                 <h2>Contact us</h2>
 
-                <div class="form-outline mb-4">
-                  <input type="text" name="name" class="form-control" required/>
-                  <label class="form-label" for="name">Name</label>
+                <div id="name-group">
+                  <div class="form-outline mb-4">
+                    <input type="text" name="name" id="name" class="form-control" />
+                    <label class="form-label" for="name">Name</label>
+                  </div>
                 </div>
 
-                <div class="form-outline mb-4">
-                  <input type="email" name="email" class="form-control" required/>
-                  <label class="form-label" for="email">Email address</label>
+                <div id="email-group">
+                  <div class="form-outline mb-4">
+                    <input type="email" name="email" id="email" class="form-control" />
+                    <label class="form-label" for="email">Email address</label>
+                  </div>
                 </div>
 
-                <div class="form-outline mb-4">
-                  <input type="text" name="subject" class="form-control" required/>
-                  <label class="form-label" for="subject">Subject</label>
+                <div id="subject-group">
+                  <div class="form-outline mb-4">
+                    <input type="text" name="subject" id="subject" class="form-control" />
+                    <label class="form-label" for="subject">Subject</label>
+                  </div>
                 </div>
 
-                <div class="form-outline mb-4">
-                  <textarea class="form-control" name="message" rows="4"></textarea>
-                  <label class="form-label" for="message">Message</label>
+                <div id="message-group">
+                  <div class="form-outline mb-4">
+                    <textarea type="text" name="message" id="message" rows="4" class="form-control"></textarea>
+                    <label class="form-label" for="message">Message</label>
+                  </div>
                 </div>
-                
-                <button id="custom-validation-button" type="submit" Value="Send" class="btn btn-primary btn-block mb-4">
+
+                <button type="submit" name="send" Value="Submit" class="btn btn-primary btn-block mb-4">
                   Send
                 </button>
 
