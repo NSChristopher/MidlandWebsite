@@ -26,57 +26,62 @@
   <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 
   <script>
-    $(document).ready(function () {
-    $("form").submit(function (event) {
-      $(".form-group").removeClass("has-error");
-      $(".help-block").remove();
+    $(document).ready(function() {
+          $("form").submit(function(event) {
+              $(".form-group").removeClass("has-error");
+              $(".help-block").remove();
 
-      var formData = {
-        name: $("#name").val(),
-        email: $("#email").val(),
-        subject: $("#subject").val(),
-        message: $("#message").val(),
-      };
-  
-      $.ajax({
-        type: "POST",
-        url: "form.php",
-        data: formData,
-        dataType: "json",
-        encode: true,
-      }).done(function (data) {
-        console.log(data);
+              var formData = {
+                name: $("#name").val(),
+                email: $("#email").val(),
+                subject: $("#subject").val(),
+                message: $("#message").val(),
+              };
 
-        if (!data.success) {
-          if (data.errors.name) {
-            $("#name-group").addClass("has-error");
-            $("#name-group").prepend(
-              '<div class="help-block">' + data.errors.name + "</div>"
-            );
-          }
+              $.ajax({
+                type: "POST",
+                url: "form.php",
+                data: formData,
+                dataType: "json",
+                encode: true,
+              }).done(function(data) {
+                  console.log(data);
 
-          if (data.errors.email) {
-            $("email").addClass("has-error");
-            $("email").append(
-              '<div class="help-block">' + data.errors.email + "</div>"
-            );
-          }
+                  if (!data.success) {
+                    if (data.errors.name) {
+                      $("#name-group").addClass("has-error");
+                      $("#name-group").prepend(
+                        '<div class="help-block">' + data.errors.name + "</div>"
+                      );
+                    }
 
-          if (data.errors.superheroAlias) {
-            $("subject").addClass("has-error");
-            $("subject").append(
-              '<div class="help-block">' + data.errors.superheroAlias + "</div>"
-            );
-          }
-        } else {
-          $("form").html(
-            '<div class="alert alert-success">' + data.message + "</div>"
-          );
-        }
-      });
-      event.preventDefault();
-    });
-  });
+                    if (data.errors.email) {
+                      $("email-group").addClass("has-error");
+                      $("email-group").prepend(
+                        '<div class="help-block">' + data.errors.email + "</div>"
+                      );
+                    }
+
+                    if (data.errors.superheroAlias) {
+                      $("subject-group").addClass("has-error");
+                      $("subject-group").prepend(
+                        '<div class="help-block">' + data.errors.subject + "</div>"
+                      );
+
+                      if (data.errors.superheroAlias) {
+                        $("message-group").addClass("has-error");
+                        $("message-group").prepend(
+                          '<div class="help-block">' + data.errors.message + "</div>"
+                        );
+                      }
+                    } else {
+                      $("form").html(
+                        '<div class="alert alert-success">' + data.message + "</div>"
+                      );
+                    }
+                  }); event.preventDefault();
+              });
+          });
   </script>
 
 </head>
@@ -87,9 +92,7 @@
       <div class="container">
         <a href="home" class="navbar-brand logo">MIDLAND</a>
 
-        <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse"
-          data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
 
@@ -124,8 +127,7 @@
         <div class="blog-post">
           <div class="row">
             <div class="col-auto">
-              <img class="img-fluid rounded-circle m-4 shadow-3-strong" src="img/CEO.jpg"
-                style="width: 150px; height: 150px; background-color: grey" />
+              <img class="img-fluid rounded-circle m-4 shadow-3-strong" src="img/CEO.jpg" style="width: 150px; height: 150px; background-color: grey" />
             </div>
             <div class="col vertical-center">
               <div class="container">
@@ -168,54 +170,32 @@
                 <h2>Contact us</h2>
 
                 <div id="name-group">
-                <div class="form-outline mb-4">
-                  <input 
-                    type="text"
-                    name="name"
-                    id="name"
-                    class="form-control"
-                  />
-                  <label class="form-label" for="name">Name</label>
-                </div>
-</div>
-
-                <div class="form-outline mb-4">
-                  <input
-                    type="email" 
-                    name="email"
-                    id="email"
-                    class="form-control"
-                  />
-                  <label class="form-label" for="email">Email address</label>
+                  <div class="form-outline mb-4">
+                    <input type="text" name="name" id="name" class="form-control" />
+                    <label class="form-label" for="name">Name</label>
+                  </div>
                 </div>
 
-                <div class="form-outline mb-4">
-                  <input
-                    type="text" 
-                    name="subject"
-                    id="subject"
-                    class="form-control"
-                  />
-                  <label class="form-label" for="subject">Subject</label>
+                <div>
+                  <div class="form-outline mb-4">
+                    <input type="email" name="email" id="email" class="form-control" />
+                    <label class="form-label" for="email">Email address</label>
+                  </div>
                 </div>
 
-                <div class="form-outline mb-4">
-                  <textarea 
-                    type="text"
-                    name="message" 
-                    id="message"
-                    rows="4"
-                    class="form-control"
-                  ></textarea>
-                  <label class="form-label" for="message">Message</label>
+                <div>
+                  <div class="form-outline mb-4">
+                    <input type="text" name="subject" id="subject" class="form-control" />
+                    <label class="form-label" for="subject">Subject</label>
+                  </div>
                 </div>
-                
-                <button 
-                  type="submit" 
-                  name="send" 
-                  Value="Submit" 
-                  class="btn btn-primary btn-block mb-4"
-                >
+                <div>
+                  <div class="form-outline mb-4">
+                    <textarea type="text" name="message" id="message" rows="4" class="form-control"></textarea>
+                    <label class="form-label" for="message">Message</label>
+                  </div>
+                </div>
+                <button type="submit" name="send" Value="Submit" class="btn btn-primary btn-block mb-4">
                   Send
                 </button>
 
@@ -262,7 +242,7 @@
         </div>
       </div>
     </div>
-  </footer> 
+  </footer>
 </body>
 
 <!-- MDB -->
