@@ -37,6 +37,7 @@ if (!empty($errors)) {
     $data['success'] = true;
     $data['message'] = 'Email sent!';
 }
+echo json_encode($data);
 
 $mail->Username = 'platinumpayrol@gmail.com';
 $mail->Password = 'uetsnvrihifjbdcc';
@@ -51,13 +52,11 @@ if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
     Message: {$_POST['message']}
     EOT;
     if (!$mail->send()) {
-        $data['mailer-msg'] = 'Sorry there was an issue. please try again later.';
+        $msg = 'Sorry there was an issue. please try again later.';
     } else {
-        $data['mailer-msg'] = 'Message sent! Thanks for contacting us.';
+        $msg = 'Message sent! Thanks for contacting us.';
     }
 } else {
-    $data['mailer-msg'] = 'Share it with us!';
+    $msg = 'Share it with us!';
 }
-
-echo json_encode($data);
 ?>
