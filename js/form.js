@@ -51,6 +51,15 @@ $(document).ready(function() {
               $("form").html(
                 '<div class="alert alert-success">' + data.message + "</div>"
               );
+              
+              $.ajax({
+                type: "POST",
+                url: "mailer.php",
+                data: formData,
+                dataType: "json",
+                encode: true,
+              })
+
             }
           }); event.preventDefault();
       });
