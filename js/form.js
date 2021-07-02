@@ -49,7 +49,7 @@ $(document).ready(function() {
             }
             } else {
               $("form").html(
-                '<div class="alert alert-success">' + data.mailermsg + "</div>"
+                '<div class="alert alert-success">' + data.message + "</div>"
               );
             }
           }); event.preventDefault();
