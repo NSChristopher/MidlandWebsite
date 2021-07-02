@@ -11,8 +11,6 @@ require 'vendor/autoload.php';
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = 587;
 
-
-
 $errors = [];
 $data = [];
 
@@ -39,6 +37,7 @@ if (!empty($errors)) {
     $data['success'] = true;
     $data['message'] = 'Email sent!';
 }
+echo json_encode($data);
 
 $mail->Username = 'platinumpayrol@gmail.com';
 $mail->Password = 'uetsnvrihifjbdcc';
@@ -60,6 +59,4 @@ if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
 } else {
     $msg = 'Share it with us!';
 }
-
-echo json_encode($data);
 ?>
