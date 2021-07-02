@@ -3,8 +3,6 @@
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
     $mail = new PHPMailer();
-    $errors = [];
-    $data = [];
     $mail->IsSMTP();
     $mail->SMTPDebug = 2;
     $mail->SMTPAuth = true;
@@ -13,6 +11,8 @@ require 'vendor/autoload.php';
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = 587;
 
+$errors = [];
+$data = [];
 
 if (empty($_POST['name'])) {
     $errors['name'] = 'Name is required.';
