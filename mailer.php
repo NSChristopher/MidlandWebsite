@@ -16,6 +16,9 @@ $mail->Port = 587;
 $mail->Username = 'platinumpayrol@gmail.com';
 $mail->Password = 'uetsnvrihifjbdcc';
 
+$data['success'] = true;
+$data['message'] = 'Share it with us!';
+echo json_encode($data);
 
 $mail->setFrom('noah@cardpaymentsolutions.com', 'Gus Prentzas');
 $mail->addAddress('noahschristopher250@gmail.com', 'Receiver Name');
