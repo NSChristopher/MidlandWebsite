@@ -3,8 +3,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
 
     $data = [];
-
     $mail = new PHPMailer();
+
     $mail->IsSMTP();
     $mail->SMTPDebug = 2;
     $mail->SMTPAuth = true;
@@ -35,7 +35,7 @@ require 'vendor/autoload.php';
     } else {
         $data['message'] = 'Share it with us!';
     }
-    
+
 
     echo json_encode($data);
 ?>
