@@ -109,7 +109,7 @@
 
             <div class="col-md-6 mb-4">
 
-              <form id="form" name="form" action="form.php" method="POST">
+              <form id="form" name="form" action="" method="POST">
                 <h2>Contact us</h2>
 
                 <div id="name-group">
