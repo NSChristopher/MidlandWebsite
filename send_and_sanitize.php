@@ -1,5 +1,4 @@
 <?php
-use mail_func;
 
 $errors = [];
 $data = [
