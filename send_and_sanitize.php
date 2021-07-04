@@ -7,16 +7,14 @@ $data = [
     $email = $_POST['email'],
     $subject = $_POST['subject'],
     $message = $_POST['message'],
-    $msg = 'hello',
+    $msg = 'hello', // testing
 ];
 
 $data = sanitize_and_validate($data);
 
 $errors[] = $data['errors'];
 
-if (!($errors['has_errors'])) {
-    send_mail($data);    
-}
+send_mail($data);
 
-echo $data;
+return $data;
 ?>
