@@ -1,11 +1,11 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
-require 'vendor/autoload.php';
 
 $data = [];
-$mail = new PHPMailer();
 
 try {
+require 'vendor/autoload.php';
+$mail = new PHPMailer();
 $mail->IsSMTP();
 $mail->SMTPDebug = 2;
 $mail->SMTPAuth = true;
@@ -41,8 +41,7 @@ if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
 } else {
     $data['success'] = true;
     $data['message'] = 'Share it with us!';
-}
-}
+}}
 catch (Exception $e) {
     $data['success'] = true;
     $data['message'] = 'Share it with us!';
