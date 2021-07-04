@@ -18,10 +18,6 @@
         encode: true,
       }).done(function(data) {
           console.log(data);
-
-          $("form").html(
-            '<div class="alert alert-success">' + data.message + "</div>")
-
           if (!data.success) {
             if (data.errors.name) {
               $("#name-group").addClass("has-error");
