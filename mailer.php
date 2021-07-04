@@ -1,6 +1,9 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
+
+    $data = [];
+
     $mail = new PHPMailer();
     $mail->IsSMTP();
     $mail->SMTPDebug = 2;
@@ -23,11 +26,12 @@ require 'vendor/autoload.php';
         Message: {$_POST['message']}
         EOT;
         if (!$mail->send()) {
-            $msg = 'Sorry there was an issue. please try again later.';
+            $data['message'] = 'Sorry there was an issue. please try again later.';
         } else {
-            $msg = 'Message sent! Thanks for contacting us.';
+            $data['message']  = 'Message sent! Thanks for contacting us.';
         }
     } else {
-        $msg = 'Share it with us!';
+        $data['message'] = 'Share it with us!';
     }
+    echo json_encode($data);
 ?>

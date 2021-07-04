@@ -12,7 +12,7 @@
 
       $.ajax({
         type: "POST",
-        url: "form.php",
+        url: "mailer.php",
         data: formData,
         dataType: "json",
         encode: true,
