@@ -39,6 +39,7 @@ if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
     $data['message'] = 'Share it with us!';
 }
 
-
+$data['success'] = true;
+$data['message'] = 'Share it with us!';
 echo json_encode($data);
 ?>
