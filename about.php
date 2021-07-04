@@ -23,6 +23,10 @@
   <!-- Custom styles -->
   <link rel="stylesheet" href="css/custom.css" />
 
+  <!-- do i need this? -->
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.11/dist/summernote-bs4.min.css" rel="stylesheet">
+
+
   <!-- Custom js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.9.1.js"></script>

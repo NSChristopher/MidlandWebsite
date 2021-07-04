@@ -12,12 +12,17 @@
 
       $.ajax({
         type: "POST",
-        url: "mailer.php",
+        url: "send_and_sanitize.php",
         data: formData,
         dataType: "json",
         encode: true,
       }).done(function(data) {
           console.log(data);
+
+          $("#name-group").prepend(
+            '<div class="help-block text-danger">' + data.errors.name_length + "</div>"
+          );
+
           if (!data.success) {
             if (data.errors.name) {
               $("#name-group").addClass("has-error");
