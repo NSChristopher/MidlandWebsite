@@ -14,6 +14,8 @@ $data = $process->sanitize_and_validate($data);
 
 $errors[] = $data['errors'];
 
+echo $msg = "yoyo";
+
 if (!($errors['has_errors'])) {
     $process->send_mail($data);    
 }
