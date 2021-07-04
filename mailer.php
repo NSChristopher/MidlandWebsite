@@ -15,6 +15,8 @@ require 'vendor/autoload.php';
 
     $mail->Username = 'platinumpayrol@gmail.com';
     $mail->Password = 'uetsnvrihifjbdcc';
+
+
     $mail->setFrom('noah@cardpaymentsolutions.com', 'Gus Prentzas');
     $mail->addAddress('noahschristopher250@gmail.com', 'Receiver Name');
     if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
@@ -33,5 +35,7 @@ require 'vendor/autoload.php';
     } else {
         $data['message'] = 'Share it with us!';
     }
+    
+
     echo json_encode($data);
 ?>
