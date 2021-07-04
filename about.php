@@ -26,7 +26,7 @@
   <!-- Custom js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-  <script>
+  <!-- <script>
   $(document).ready(function() {
       $("form").submit(function(event) {
       $(".form-group").removeClass("has-error");
@@ -84,7 +84,7 @@
           }); event.preventDefault();
       });
   });
-  </script>
+  </script> -->
 
 </head>
 
@@ -253,6 +253,6 @@
 <script type="text/javascript" language="javascript" src="js/mdb.min.js"></script>
 <!-- Custom scripts -->
 <script type="text/javascript" language="javascript" src="js/index.js"></script>
-<!-- <script type="text/javascript" language="javascript" src="js/form.js"></script> -->
+<script type="text/javascript" language="javascript" src="js/form.js"></script>
 
 </html>
