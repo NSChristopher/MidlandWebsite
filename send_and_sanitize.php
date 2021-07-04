@@ -7,6 +7,7 @@ $data = [
     $email = $_POST['email'],
     $subject = $_POST['subject'],
     $message = $_POST['message'],
+    $msg = 'hello',
 ];
 
 $data = sanitize_and_validate($data);
