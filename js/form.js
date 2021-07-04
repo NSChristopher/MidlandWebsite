@@ -12,7 +12,7 @@
 
       $.ajax({
         type: "POST",
-        url: "form.php",
+        url: "mailer.php",
         data: formData,
         dataType: "json",
         encode: true,
@@ -51,13 +51,6 @@
               $("form").html(
                 '<div class="alert alert-success">' + data.message + "</div>"
               );
-              $.ajax({
-                type: "POST",
-                url: "mailer.php",
-                data: formData,
-                dataType: "json",
-                encode: true,
-              })
             }
           }); event.preventDefault();
       });
