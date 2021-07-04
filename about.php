@@ -195,5 +195,6 @@
 <script type="text/javascript" language="javascript" src="js/mdb.min.js"></script>
 <!-- Custom scripts -->
 <script type="text/javascript" language="javascript" src="js/index.js"></script>
+<script type="text/javascript" language="javascript" src="js/form.js"></script>
 
 </html>
