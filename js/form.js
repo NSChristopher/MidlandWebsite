@@ -19,10 +19,6 @@
       }).done(function(data) {
           console.log(data);
 
-          $("#name-group").prepend(
-            '<div class="help-block text-danger">' + data.errors.name_length + "</div>"
-          );
-
           if (!data.success) {
             if (data.errors.name) {
               $("#name-group").addClass("has-error");

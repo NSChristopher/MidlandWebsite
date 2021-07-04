@@ -61,7 +61,7 @@ function sanitize_and_validate($data) {
 	$message = filter_var($message, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 	if (empty($message)) {
 		$errors['message_filter'] = "<p>message is empty or invalid</p>";
-		$errors['has_error'] = true;
+		$errors['has-error'] = true;
 	}
 
 	return $data = array(
