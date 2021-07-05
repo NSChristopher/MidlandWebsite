@@ -11,68 +11,57 @@ function okLength($str, $maxlen) {
     return ($len > 0) and ($len <= $maxlen);
 }
 
-function sanitize_and_validate($data) {
-	$name = getItem($data, 'name');
-	$email = getItem($data, 'email');
-	$subject = getItem($data, 'subject');
-	$message = getItem($data, 'message');
-	$msg = $data['message'];
+function sanitize_and_validate($data_in) {
+	$data = json_decode($data_in);
 
 	$errors = [];
 
-	if (! okLength($name, 100)) {
+	if (! okLength($data['name'], 100)) {
 		$errors['name_length'] = "<p>name over 100 characters</p>";
 		$errors['has_error'] = true;
 	}
-	if (! okLength($email, 100)) {
+	if (! okLength($data['email'], 100)) {
 		$errors['email_length'] = "<p>email over 100 characters</p>";
 		$errors['has_error'] = true;
 	}
-	if (! okLength($subject, 250)) {
+	if (! okLength($data['subject'], 250)) {
 		$errors['subject_length'] = "<p>subject over 250 characters</p>";
 		$errors['has_error'] = true;
 	}
-	if (! okLength($message, 2048)) {
+	if (! okLength($data['message'], 2048)) {
 		$errors['message_length'] = "<p>message over 2048 characters</p>";
 		$errors['has_error'] = true;
 	}
 
-	$name = trim($name);
-	$name = filter_var($name, FILTER_SANITIZE_STRING);
-	if (empty($name)) {
+	$data['name'] = trim($data['name']);
+	$data['name'] = filter_var($data['name'], FILTER_SANITIZE_STRING);
+	if (empty($data['name'])) {
 		$errors['name_filter'] = "<p>name is empty or invalid</p>";
 		$errors['has_error'] = true;
 	}
 
-	$email = trim($email);
-	$email = filter_var($email, FILTER_SANITIZE_EMAIL);
-	if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
+	$data['email'] = trim($data['email']);
+	$data['email'] = filter_var($data['email'], FILTER_SANITIZE_EMAIL);
+	if (! filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
 		$errors['email_filter'] = "<p>email is empty or invalid</p>";
 		$errors['has_error'] = true;
 	}
 
-	$subject = trim($subject);
-	$subject = filter_var($subject, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
-	if (empty($subject)) {
+	$data['subject'] = trim($data['subject']);
+	$data['subject'] = filter_var($data['subject'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+	if (empty($data['subject'])) {
 		$errors['subject_filter'] = "<p>subject is empty or invalid</p>";
 		$errors['has_error'] = true;
 	}
 
-	$message = trim($message);
-	$message = filter_var($message, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
-	if (empty($message)) {
+	$data['message'] = trim($data['message']);
+	$data['message'] = filter_var($data['message'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+	if (empty($data['message'])) {
 		$errors['message_filter'] = "<p>message is empty or invalid</p>";
 		$errors['has-error'] = true;
 	}
 
-	echo json_encode($data = array(
-		'name' => $name,
-		'email' => $email,
-		'subject' => $subject,
-		'message' => $message,
-		'errors' => $errors,
-		'msg' => $msg,
-	));
+	echo json_encode($data);
 }
 
 function send_mail($data) {
