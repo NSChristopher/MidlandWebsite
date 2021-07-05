@@ -19,6 +19,8 @@ try {
     $errors[] = $data['errors'];
 
     send_mail($data);
+
+    echo json_encode($data);
 }
 catch (\Error $e) {
     $response['success'] = false;
