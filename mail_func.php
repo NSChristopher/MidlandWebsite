@@ -65,7 +65,7 @@ function sanitize_and_validate(array $data) {
 		$errors['has-error'] = true;
 	}
 
-	echo json_encode($data = array(
+	return json_encode($data = array(
 		'name' => $name,
 		'email' => $email,
 		'subject' => $subject,
