@@ -25,6 +25,8 @@ public function sanitize_and_validate() {
 	$error = $this->data['error'];
 	$errors = $this->data['errors'];
 
+	echo json_encode($name);
+
 	if (! $this->okLength($name, 100)) {
 		$errors['name_length'] = "<p>name over 100 characters</p>";
 		$error = true;
