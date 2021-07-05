@@ -10,7 +10,7 @@ $data = [
     $msg = 'hello', // testing
 ];
 
-$data = sanitize_and_validate($data);
+sanitize_and_validate($data);
 
 $errors[] = $data['errors'];
 
