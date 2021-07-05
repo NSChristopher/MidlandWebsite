@@ -1,8 +1,11 @@
 <?php
+use mail_func;
 include 'mail_func.php';
 header('Content-type: application/json');
 $response['success'] = true;
 $response['error'] = null;
+
+$func = new mail_func();
 
 $errors = [];
 $data = [
@@ -15,9 +18,9 @@ $data = [
 ];
 
 try {
-    sanitize_and_validate($data);
+    $func->sanitize_and_validate($data);
 
-    send_mail($data);
+    $func->send_mail($data);
 
     echo json_encode($data);
 }

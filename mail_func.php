@@ -1,17 +1,18 @@
 <?php
-
 use PHPMailer\PHPMailer\PHPMailer;
 
-function getItem($array, $key, $default = "") {
+class mail_func {
+
+private function getItem($array, $key, $default = "") {
     return isset($array[$key]) ? $array[$key] : $default;
 }
   
-function okLength($str, $maxlen) {
+private function okLength($str, $maxlen) {
     $len = strlen($str);
     return ($len > 0) and ($len <= $maxlen);
 }
 
-function sanitize_and_validate(&$data) {
+public function sanitize_and_validate($data) {
 	$name = $_POST['name'];
     $email = $_POST['email'];
     $subject = $_POST['subject'];
@@ -21,19 +22,19 @@ function sanitize_and_validate(&$data) {
 
 	$msg = $data['message'];
 
-	if (! okLength($name, 100)) {
+	if (! $this->okLength($name, 100)) {
 		$errors['name_length'] = "<p>name over 100 characters</p>";
 		$error = true;
 	}
-	if (! okLength($email, 100)) {
+	if (! $this->okLength($email, 100)) {
 		$errors['email_length'] = "<p>email over 100 characters</p>";
 		$error = true;
 	}
-	if (! okLength($subject, 250)) {
+	if (! $this->okLength($subject, 250)) {
 		$errors['subject_length'] = "<p>subject over 250 characters</p>";
 		$error = true;
 	}
-	if (! okLength($message, 2048)) {
+	if (! $this->okLength($message, 2048)) {
 		$errors['message_length'] = "<p>message over 2048 characters</p>";
 		$error = true;
 	}
@@ -116,5 +117,6 @@ function send_mail(array $data) {
 			return True;
 		}
     }
+}
 }
 ?>
