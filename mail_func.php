@@ -3,24 +3,27 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 class mail_func {
 
-private function getItem($array, $key, $default = "") {
-    return isset($array[$key]) ? $array[$key] : $default;
-}
+private $data = [
+			$name = $_POST['name'],
+			$email = $_POST['email'],
+			$subject = $_POST['subject'],
+			$message = $_POST['message'],
+			$error = false,
+			$errors = [],
+		];
   
 private function okLength($str, $maxlen) {
     $len = strlen($str);
     return ($len > 0) and ($len <= $maxlen);
 }
 
-public function sanitize_and_validate($data) {
-	$name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
-	$error = $_POST['error'];
-	$errors = $_POST['errors'];
-
-	$msg = $data['message'];
+public function sanitize_and_validate() {
+	$name = $this->data['name'];
+    $email = $this->data['email'];
+    $subject = $this->data['subject'];
+    $message = $this->data['message'];
+	$error = $this->data['error'];
+	$errors = $this->data['errors'];
 
 	if (! $this->okLength($name, 100)) {
 		$errors['name_length'] = "<p>name over 100 characters</p>";
@@ -67,26 +70,25 @@ public function sanitize_and_validate($data) {
 		$error = true;
 	}
 
-	echo json_encode($data = array(
+	echo json_encode($this->data = array(
 		'name' => $name,
 		'email' => $email,
 		'subject' => $subject,
 		'message' => $message,
 		'error' => $error,
 		'errors' => $errors,
-		'msg' => $msg,
 	));
 }
 
-function send_mail(array $data) {
+function send_mail() {
     require 'vendor/autoload.php';
 
     $mail = new PHPMailer();
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+    $name = $this->data['name'];
+    $email = $this->data['email'];
+    $subject = $this->data['subject'];
+    $message = $this->data['message'];
 
     $mail->IsSMTP();
     $mail->SMTPDebug = 2;

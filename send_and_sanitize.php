@@ -8,14 +8,7 @@ $response['error'] = null;
 $func = new mail_func();
 
 $errors = [];
-$data = [
-    $name = $_POST['name'],
-    $email = $_POST['email'],
-    $subject = $_POST['subject'],
-    $message = $_POST['message'],
-    $error = false,
-    $errors = [],
-];
+
 
 try {
     $func->sanitize_and_validate($data);
