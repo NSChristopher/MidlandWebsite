@@ -16,7 +16,7 @@ function sanitize_and_validate(array $data) {
 	$email = getItem($data, 'email');
 	$subject = getItem($data, 'subject');
 	$message = getItem($data, 'message');
-	$msg = $data['message'];
+	$msg = $_POST['message'];
 
 	$errors = [];
 
