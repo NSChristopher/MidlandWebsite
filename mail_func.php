@@ -11,7 +11,7 @@ function okLength($str, $maxlen) {
     return ($len > 0) and ($len <= $maxlen);
 }
 
-function sanitize_and_validate(array $data) {
+function sanitize_and_validate(&$data) {
 	$name = $_POST['name'];
     $email = $_POST['email'];
     $subject = $_POST['subject'];
@@ -19,7 +19,7 @@ function sanitize_and_validate(array $data) {
 	$error = $_POST['error'];
 	$errors = $_POST['errors'];
 
-	$msg = unserialize($data['message']);
+	$msg = $data['message'];
 
 	if (! okLength($name, 100)) {
 		$errors['name_length'] = "<p>name over 100 characters</p>";
@@ -86,8 +86,6 @@ function send_mail(array $data) {
     $email = $_POST['email'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
-
-	echo json_encode($email);
 
     $mail->IsSMTP();
     $mail->SMTPDebug = 2;
