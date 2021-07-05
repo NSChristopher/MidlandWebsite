@@ -24,5 +24,6 @@ catch (\Error $e) {
     $response['success'] = false;
     $response['error'] = $e->getMessage();
 }
+$response['error'] = 'error!';
 echo json_encode($response);
 ?>
