@@ -16,6 +16,7 @@ function sanitize_and_validate($data) {
 	$email = getItem($data, 'email');
 	$message = getItem($data, 'message');
 	$subject = getItem($data, 'subject');
+	$msg = getItem($data, 'subject');
 
 	$errors = [];
 
@@ -24,7 +25,7 @@ function sanitize_and_validate($data) {
 		$errors['has_error'] = true;
 	}
 	if (! okLength($email, 100)) {
-		$errors['message_length'] = "<p>email over 100 characters</p>";
+		$errors['email_length'] = "<p>email over 100 characters</p>";
 		$errors['has_error'] = true;
 	}
 	if (! okLength($subject, 250)) {
@@ -70,7 +71,7 @@ function sanitize_and_validate($data) {
 		'message' => $message,
 		'subject' => $subject,
 		'errors' => $errors,
-		'msg' => "testing",
+		'msg' => $msg,
 	));
 }
 
