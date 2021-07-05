@@ -1,5 +1,4 @@
 <?php
-use mail_func;
 include 'mail_func.php';
 header('Content-type: application/json');
 $response['success'] = true;
