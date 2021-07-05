@@ -1,5 +1,8 @@
 <?php
 include 'mail_func.php';
+header('Content-type: application/json');
+$response['success'] = true;
+$response['error'] = null;
 
 $errors = [];
 $data = [
@@ -10,5 +13,16 @@ $data = [
     $msg = 'hello', // testing
 ];
 
-echo json_encode($data);
+try {
+    $data = sanitize_and_validate($data);
+
+    $errors[] = $data['errors'];
+
+    send_mail($data);
+}
+catch (\Error $e) {
+    $response['success'] = false;
+    $response['error'] = $e->getMessage();
+}
+echo json_encode($response);
 ?>

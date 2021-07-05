@@ -21,7 +21,7 @@
 
           $("#name-group").addClass("has-error");
           $("#name-group").prepend(
-            '<div class="help-block text-danger">' + data.msg + "</div>"
+            '<div class="help-block text-danger">' + data.error + "</div>"
           );
 
           if (!data.success) {
