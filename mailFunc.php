@@ -1,7 +1,7 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 
-class mail_func {
+class mailFunc {
 
 private $data = [
 			$name = $_POST['name'],

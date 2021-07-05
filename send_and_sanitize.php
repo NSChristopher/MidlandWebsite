@@ -4,7 +4,7 @@ header('Content-type: application/json');
 $response['success'] = true;
 $response['error'] = null;
 
-$func = new mail_func();
+$func = new mailFunc();
 
 try {
     $func->sanitize_and_validate();
