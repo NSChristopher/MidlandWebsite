@@ -64,12 +64,13 @@ function sanitize_and_validate($data) {
 		$errors['has-error'] = true;
 	}
 
-	return $data = array(
+	echo $data = array(
 		'name' => $name,
 		'email' => $email,
 		'message' => $message,
 		'subject' => $subject,
 		'errors' => $errors,
+		'msg' => "testing",
 	);
 }
 
