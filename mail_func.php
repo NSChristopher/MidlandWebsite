@@ -12,12 +12,10 @@ function okLength($str, $maxlen) {
 }
 
 function sanitize_and_validate(array $data) {
-	$name = getItem($data, 'name');
-	$email = getItem($data, 'email');
-	$subject = getItem($data, 'subject');
-	$message = getItem($data, 'message');
-	$msg = $_POST['message'];
-
+	$name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
 	$errors = [];
 
 	if (! okLength($name, 100)) {
@@ -71,7 +69,6 @@ function sanitize_and_validate(array $data) {
 		'subject' => $subject,
 		'message' => $message,
 		'errors' => $errors,
-		'msg' => $msg,
 	));
 }
 
