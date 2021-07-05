@@ -14,7 +14,7 @@ $data = [
 ];
 
 try {
-    sanitize_and_validate($data);
+    $data = sanitize_and_validate($data);
 
     $errors[] = $data['errors'];
 
