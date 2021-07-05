@@ -16,5 +16,5 @@ $errors[] = $data['errors'];
 
 send_mail($data);
 
-return $data;
+echo json_encode($data);
 ?>
