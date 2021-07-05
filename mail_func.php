@@ -16,51 +16,54 @@ function sanitize_and_validate(array $data) {
     $email = $_POST['email'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
-	$errors = [];
+	$error = $_POST['error'];
+	$errors = $_POST['errors'];
+
+	$msg = unserialize($data['message']);
 
 	if (! okLength($name, 100)) {
 		$errors['name_length'] = "<p>name over 100 characters</p>";
-		$errors['has_error'] = true;
+		$error = true;
 	}
 	if (! okLength($email, 100)) {
 		$errors['email_length'] = "<p>email over 100 characters</p>";
-		$errors['has_error'] = true;
+		$error = true;
 	}
 	if (! okLength($subject, 250)) {
 		$errors['subject_length'] = "<p>subject over 250 characters</p>";
-		$errors['has_error'] = true;
+		$error = true;
 	}
 	if (! okLength($message, 2048)) {
 		$errors['message_length'] = "<p>message over 2048 characters</p>";
-		$errors['has_error'] = true;
+		$error = true;
 	}
 
 	$name = trim($name);
 	$name = filter_var($name, FILTER_SANITIZE_STRING);
 	if (empty($name)) {
 		$errors['name_filter'] = "<p>name is empty or invalid</p>";
-		$errors['has_error'] = true;
+		$error = true;
 	}
 
 	$email = trim($email);
 	$email = filter_var($email, FILTER_SANITIZE_EMAIL);
 	if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		$errors['email_filter'] = "<p>email is empty or invalid</p>";
-		$errors['has_error'] = true;
+		$error = true;
 	}
 
 	$subject = trim($subject);
 	$subject = filter_var($subject, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 	if (empty($subject)) {
 		$errors['subject_filter'] = "<p>subject is empty or invalid</p>";
-		$errors['has_error'] = true;
+		$error = true;
 	}
 
 	$message = trim($message);
 	$message = filter_var($message, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 	if (empty($message)) {
 		$errors['message_filter'] = "<p>message is empty or invalid</p>";
-		$errors['has-error'] = true;
+		$error = true;
 	}
 
 	echo json_encode($data = array(
@@ -68,7 +71,9 @@ function sanitize_and_validate(array $data) {
 		'email' => $email,
 		'subject' => $subject,
 		'message' => $message,
+		'error' => $error,
 		'errors' => $errors,
+		'msg' => $msg,
 	));
 }
 
@@ -77,10 +82,10 @@ function send_mail(array $data) {
 
     $mail = new PHPMailer();
 
-	$name = getItem($data, 'name');
-	$email = getItem($data, 'email');
-	$message = getItem($data, 'message');
-	$subject = getItem($data, 'subject');
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
 
 	echo json_encode($email);
 

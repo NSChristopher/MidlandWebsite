@@ -10,6 +10,7 @@ $data = [
     $email = $_POST['email'],
     $subject = $_POST['subject'],
     $message = $_POST['message'],
+    $error = false,
     $errors = [],
 ];
 
