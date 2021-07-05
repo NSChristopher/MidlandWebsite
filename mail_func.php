@@ -11,7 +11,7 @@ function okLength($str, $maxlen) {
     return ($len > 0) and ($len <= $maxlen);
 }
 
-function sanitize_and_validate($data) {
+function sanitize_and_validate(array $data) {
 	$name = getItem($data, 'name');
 	$email = getItem($data, 'email');
 	$subject = getItem($data, 'subject');
@@ -75,7 +75,7 @@ function sanitize_and_validate($data) {
 	));
 }
 
-function send_mail($data) {
+function send_mail(array $data) {
     require 'vendor/autoload.php';
 
     $mail = new PHPMailer();
