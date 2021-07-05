@@ -85,8 +85,6 @@ function send_mail(array $data) {
 	$message = getItem($data, 'message');
 	$subject = getItem($data, 'subject');
 
-	echo json_encode($email);
-
     $mail->IsSMTP();
     $mail->SMTPDebug = 2;
     $mail->SMTPAuth = true;
