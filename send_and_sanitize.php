@@ -10,11 +10,11 @@ $data = [
     $msg = 'hello', // testing
 ];
 
-$data = sanitize_and_validate($data);
+// $data = sanitize_and_validate($data);
 
-$errors[] = $data['errors'];
+// $errors[] = $data['errors'];
 
-send_mail($data);
+// send_mail($data);
 
 echo json_encode($data);
 ?>
