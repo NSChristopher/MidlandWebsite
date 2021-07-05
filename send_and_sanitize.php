@@ -5,8 +5,6 @@ $response['success'] = true;
 $response['error'] = null;
 
 $errors = [];
-
-global $data;
 $data = [
     $name = $_POST['name'],
     $email = $_POST['email'],
