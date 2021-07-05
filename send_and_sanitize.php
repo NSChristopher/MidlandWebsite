@@ -10,10 +10,11 @@ $data = [
     $email = $_POST['email'],
     $subject = $_POST['subject'],
     $message = $_POST['message'],
+    $errors = [],
 ];
 
 try {
-    $data = sanitize_and_validate($data);
+    sanitize_and_validate($data);
 
     $errors[] = $data['errors'];
 

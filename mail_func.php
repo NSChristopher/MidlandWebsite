@@ -14,9 +14,9 @@ function okLength($str, $maxlen) {
 function sanitize_and_validate($data) {
 	$name = getItem($data, 'name');
 	$email = getItem($data, 'email');
-	$message = getItem($data, 'message');
 	$subject = getItem($data, 'subject');
-	$msg = getItem($data, 'subject');
+	$message = getItem($data, 'message');
+	$msg = $data['message'];
 
 	$errors = [];
 
@@ -68,8 +68,8 @@ function sanitize_and_validate($data) {
 	echo json_encode($data = array(
 		'name' => $name,
 		'email' => $email,
-		'message' => $message,
 		'subject' => $subject,
+		'message' => $message,
 		'errors' => $errors,
 		'msg' => $msg,
 	));
