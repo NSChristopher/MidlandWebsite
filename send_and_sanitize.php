@@ -14,7 +14,7 @@ $data = [
 ];
 
 try {
-    $data = sanitize_and_validate($data);
+    sanitize_and_validate($data);
 
     send_mail($data);
 
