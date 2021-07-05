@@ -1,5 +1,6 @@
 <?php
 include 'mail_func.php';
+header('Content-type: application/json');
 $response['success'] = true;
 $response['error'] = null;
 

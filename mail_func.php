@@ -1,6 +1,6 @@
 <?php
-
 use PHPMailer\PHPMailer\PHPMailer;
+include 'send_and_sanitize.php';
 
 function getItem($array, $key, $default = "") {
     return isset($array[$key]) ? $array[$key] : $default;
