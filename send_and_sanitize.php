@@ -5,9 +5,10 @@ $response['success'] = true;
 $response['error'] = null;
 
 $func = new mail_func();
+
 try {
-    $func::sanitize_and_validate();
-    $func::send_mail();
+    $func->sanitize_and_validate();
+    $func->send_mail();
 }
 catch (\Error $e) {
     $response['success'] = false;
