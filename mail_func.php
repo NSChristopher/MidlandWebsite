@@ -13,6 +13,7 @@ function okLength($str, $maxlen) {
 
 function sanitize_and_validate($data_in) {
 	$data = json_decode($data_in);
+	echo json_encode($data);
 
 	$errors = [];
 
