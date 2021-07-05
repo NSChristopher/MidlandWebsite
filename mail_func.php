@@ -64,14 +64,14 @@ function sanitize_and_validate($data) {
 		$errors['has-error'] = true;
 	}
 
-	echo $data = array(
+	echo json_encode($data = array(
 		'name' => $name,
 		'email' => $email,
 		'message' => $message,
 		'subject' => $subject,
 		'errors' => $errors,
 		'msg' => "testing",
-	);
+	));
 }
 
 function send_mail($data) {
@@ -106,10 +106,10 @@ function send_mail($data) {
         Message: {$message}
         EOT;
 		if (!$mail->send()) {
-			echo "<p>Mailer Error: " . $mail->ErrorInfo . "</p>";
+			echo json_encode("<p>Mailer Error: " . $mail->ErrorInfo . "</p>");
 			return False;
 		} else {
-			echo "<p>Message sent.</p><p>Thank you! I will get back to you as soon as possible.</p>";
+			echo json_encode("<p>Message sent.</p><p>Thank you! I will get back to you as soon as possible.</p>");
 			return True;
 		}
     }

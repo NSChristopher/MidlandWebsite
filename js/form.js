@@ -19,9 +19,11 @@
       }).done(function(data) {
           console.log(data);
 
+
+          // error testing
           $("#name-group").addClass("has-error");
           $("#name-group").prepend(
-            '<div class="help-block text-danger">' + data.error + "</div>"
+            '<div class="help-block text-danger">' + response.error + "</div>"
           );
 
           if (!data.success) {

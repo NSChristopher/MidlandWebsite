@@ -10,7 +10,6 @@ $data = [
     $email = $_POST['email'],
     $subject = $_POST['subject'],
     $message = $_POST['message'],
-    $msg = 'hello', // testing
 ];
 
 try {
@@ -24,6 +23,5 @@ catch (\Error $e) {
     $response['success'] = false;
     $response['error'] = $e->getMessage();
 }
-$response['error'] = 'error!';
 echo json_encode($response);
 ?>
