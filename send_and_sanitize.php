@@ -4,7 +4,7 @@ header('Content-type: application/json');
 $response['success'] = true;
 $response['error'] = null;
 
-$data = array (
+$data = array(
     $name => $_POST['name'],
     $email => $_POST['email'],
     $subject => $_POST['subject'],
