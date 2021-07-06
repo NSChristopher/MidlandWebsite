@@ -8,13 +8,15 @@ private function okLength($str, $maxlen) {
     return ($len > 0) and ($len <= $maxlen);
 }
 
-public function sanitize_and_validate() {
-	$name = $this->data['name'];
-    $email = $this->data['email'];
+public function sanitize_and_validate($data) {
+	$name = $data['name'];
+    $email = $data['email'];
     $subject = $this->data['subject'];
     $message = $this->data['message'];
 	$error = $this->data['error'];
 	$errors = $this->data['errors'];
+
+	echo json_encode($name);
 
 	if (! $this->okLength($name, 100)) {
 		$errors['name_length'] = "name over 100 characters";
@@ -71,7 +73,7 @@ public function sanitize_and_validate() {
 	));
 }
 
-function send_mail() {
+function send_mail($data) {
     require 'vendor/autoload.php';
 
     $mail = new PHPMailer();
