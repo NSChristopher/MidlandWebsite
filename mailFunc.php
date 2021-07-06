@@ -8,69 +8,69 @@ private function okLength($str, $maxlen) {
     return ($len > 0) and ($len <= $maxlen);
 }
 
-public function sanitize_and_validate(array $data) {
-	$name = $data['name'];
-    $email = $data['email'];
-    $subject = $this->data['subject'];
-    $message = $this->data['message'];
-	$error = $this->data['error'];
-	$errors = $this->data['errors'];
+public function sanitize_and_validate($data) {
+	// $name = $this->data['name'];
+    // $email = $this->data['email'];
+    // $subject = $this->data['subject'];
+    // $message = $this->data['message'];
+	// $error = $this->data['error'];
+	// $errors = $this->data['errors'];
 
-	echo json_encode($name);
+	echo json_encode($data);
 
-	if (! $this->okLength($name, 100)) {
-		$errors['name_length'] = "name over 100 characters";
-		$error = true;
-	}
-	if (! $this->okLength($email, 100)) {
-		$errors['email_length'] = "email over 100 characters";
-		$error = true;
-	}
-	if (! $this->okLength($subject, 250)) {
-		$errors['subject_length'] = "subject over 250 characters";
-		$error = true;
-	}
-	if (! $this->okLength($message, 2048)) {
-		$errors['message_length'] = "message over 2048 characters";
-		$error = true;
-	}
+	// if (! $this->okLength($name, 100)) {
+	// 	$errors['name_length'] = "name over 100 characters";
+	// 	$error = true;
+	// }
+	// if (! $this->okLength($email, 100)) {
+	// 	$errors['email_length'] = "email over 100 characters";
+	// 	$error = true;
+	// }
+	// if (! $this->okLength($subject, 250)) {
+	// 	$errors['subject_length'] = "subject over 250 characters";
+	// 	$error = true;
+	// }
+	// if (! $this->okLength($message, 2048)) {
+	// 	$errors['message_length'] = "message over 2048 characters";
+	// 	$error = true;
+	// }
 
-	$name = trim($name);
-	$name = filter_var($name, FILTER_SANITIZE_STRING);
-	if (empty($name)) {
-		$errors['name_filter'] = "name is empty or invalid";
-		$error = true;
-	}
+	// $name = trim($name);
+	// $name = filter_var($name, FILTER_SANITIZE_STRING);
+	// if (empty($name)) {
+	// 	$errors['name_filter'] = "name is empty or invalid";
+	// 	$error = true;
+	// }
 
-	$email = trim($email);
-	$email = filter_var($email, FILTER_SANITIZE_EMAIL);
-	if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		$errors['email_filter'] = "email is empty or invalid";
-		$error = true;
-	}
+	// $email = trim($email);
+	// $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+	// if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
+	// 	$errors['email_filter'] = "email is empty or invalid";
+	// 	$error = true;
+	// }
 
-	$subject = trim($subject);
-	$subject = filter_var($subject, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
-	if (empty($subject)) {
-		$errors['subject_filter'] = "subject is empty or invalid";
-		$error = true;
-	}
+	// $subject = trim($subject);
+	// $subject = filter_var($subject, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+	// if (empty($subject)) {
+	// 	$errors['subject_filter'] = "subject is empty or invalid";
+	// 	$error = true;
+	// }
 
-	$message = trim($message);
-	$message = filter_var($message, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
-	if (empty($message)) {
-		$errors['message_filter'] = "message is empty or invalid";
-		$error = true;
-	}
+	// $message = trim($message);
+	// $message = filter_var($message, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+	// if (empty($message)) {
+	// 	$errors['message_filter'] = "message is empty or invalid";
+	// 	$error = true;
+	// }
 
-	echo json_encode($this->data = array(
-		'name' => $name,
-		'email' => $email,
-		'subject' => $subject,
-		'message' => $message,
-		'error' => $error,
-		'errors' => $errors,
-	));
+	// echo json_encode($this->data = array(
+	// 	'name' => $name,
+	// 	'email' => $email,
+	// 	'subject' => $subject,
+	// 	'message' => $message,
+	// 	'error' => $error,
+	// 	'errors' => $errors,
+	// ));
 }
 
 function send_mail(array $data) {
