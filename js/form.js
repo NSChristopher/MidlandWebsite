@@ -23,7 +23,7 @@
           // error testing
           $("#name-group").addClass("has-error");
           $("#name-group").prepend(
-            '<div class="help-block text-danger">' + response.error + "</div>"
+            '<div class="help-block text-danger">' + data.errors.name_length + "</div>"
           );
 
           if (!data.success) {
