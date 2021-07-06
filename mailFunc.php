@@ -9,7 +9,7 @@ private function okLength($str, $maxlen) {
 }
 
 public function sanitize_and_validate($data) {
-	$name = $data['$name'];
+	$name = $data[0];
     $email = $data['email'];
     $subject = $data['subject'];
     $message = $data['message'];
