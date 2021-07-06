@@ -4,15 +4,13 @@ header('Content-type: application/json');
 $response['success'] = true;
 $response['error'] = null;
 
-$getname = $_POST['name'];
-
 $data = array(
-    $name => $getname,
-    $email => $_POST['email'],
-    $subject => $_POST['subject'],
-    $message => $_POST['message'],
-    $error => false,
-    $errors => [],
+    'name' => $_POST['name'],
+    'email' => $_POST['email'],
+    'subject' => $_POST['subject'],
+    'message' => $_POST['message'],
+    'error' => false,
+    'errors' => [],
 );
 
 $func = new mailFunc();
@@ -25,5 +23,5 @@ catch (\Error $e) {
     $response['success'] = false;
     $response['error'] = $e->getMessage();
 }
-echo json_encode($getname);
+echo json_encode($response);
 ?>
