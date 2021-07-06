@@ -106,7 +106,8 @@ function send_mail($data) {
 			echo json_encode("<p>Mailer Error: " . $mail->ErrorInfo . "</p>");
 			return False;
 		} else {
-			echo json_encode("<p>Message sent.</p><p>Thank you! I will get back to you as soon as possible.</p>");
+			$msg = "<p>Message sent.</p><p>Thank you! I will get back to you as soon as possible.</p>";
+			echo $msg;
 			return True;
 		}
     }
