@@ -16,7 +16,7 @@ $data = array(
 $func = new mailFunc();
 
 try {
-    $func->sanitize_and_validate($data);
+    $data = $func->sanitize_and_validate($data);
 
     if (!($data['error'])) {
         $func->send_mail($data);
