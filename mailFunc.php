@@ -8,7 +8,7 @@ private function okLength($str, $maxlen) {
     return ($len > 0) and ($len <= $maxlen);
 }
 
-public function sanitize_and_validate($data) {
+public function sanitize_and_validate(array $data) {
 	$name = $data['name'];
     $email = $data['email'];
     $subject = $this->data['subject'];
@@ -73,7 +73,7 @@ public function sanitize_and_validate($data) {
 	));
 }
 
-function send_mail($data) {
+function send_mail(array $data) {
     require 'vendor/autoload.php';
 
     $mail = new PHPMailer();
