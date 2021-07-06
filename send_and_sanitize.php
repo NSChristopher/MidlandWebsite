@@ -16,8 +16,8 @@ $data = [
 $func = new mailFunc();
 
 try {
-    $func->sanitize_and_validate();
-    $func->send_mail();
+    $func->sanitize_and_validate($_POST['name']);
+    $func->send_mail($data);
 }
 catch (\Error $e) {
     $response['success'] = false;
