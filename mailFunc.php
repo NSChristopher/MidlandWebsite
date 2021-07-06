@@ -2,15 +2,6 @@
 use PHPMailer\PHPMailer\PHPMailer;
 
 class mailFunc {
-
-private $data = [
-			$name = $_POST['name'],
-			$email = $_POST['email'],
-			$subject = $_POST['subject'],
-			$message = $_POST['message'],
-			$error = false,
-			$errors = [],
-		];
   
 private function okLength($str, $maxlen) {
     $len = strlen($str);
