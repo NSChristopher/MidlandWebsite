@@ -4,19 +4,19 @@ header('Content-type: application/json');
 $response['success'] = true;
 $response['error'] = null;
 
-$data = [
-    $name = $_POST['name'],
-    $email = $_POST['email'],
-    $subject = $_POST['subject'],
-    $message = $_POST['message'],
-    $error = false,
-    $errors = [],
-];
+$data = array (
+    $name => $_POST['name'],
+    $email => $_POST['email'],
+    $subject => $_POST['subject'],
+    $message => $_POST['message'],
+    $error => false,
+    $errors => [],
+);
 
 $func = new mailFunc();
 
 try {
-    $func->sanitize_and_validate($_POST['name']);
+    $func->sanitize_and_validate($data);
     $func->send_mail($data);
 }
 catch (\Error $e) {
