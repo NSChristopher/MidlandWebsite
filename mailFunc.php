@@ -9,14 +9,12 @@ private function okLength($str, $maxlen) {
 }
 
 public function sanitize_and_validate($data) {
-	$name = $data[0];
+	$name = $data['name'];
     $email = $data['email'];
     $subject = $data['subject'];
     $message = $data['message'];
 	$error = $data['error'];
 	$errors = $data['errors'];
-
-	echo json_encode($name);
 
 	if (! $this->okLength($name, 100)) {
 		$errors['name_length'] = "name over 100 characters";
@@ -63,25 +61,25 @@ public function sanitize_and_validate($data) {
 		$error = true;
 	}
 
-	echo json_encode($this->data = array(
+	return $data = array(
 		'name' => $name,
 		'email' => $email,
 		'subject' => $subject,
 		'message' => $message,
 		'error' => $error,
 		'errors' => $errors,
-	));
+	);
 }
 
-function send_mail(array $data) {
+function send_mail($data) {
     require 'vendor/autoload.php';
 
     $mail = new PHPMailer();
 
-    $name = $this->data['name'];
-    $email = $this->data['email'];
-    $subject = $this->data['subject'];
-    $message = $this->data['message'];
+    $name = $data['name'];
+    $email = $data['email'];
+    $subject = $data['subject'];
+    $message = $data['message'];
 
     $mail->IsSMTP();
     $mail->SMTPDebug = 2;
