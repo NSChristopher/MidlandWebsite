@@ -85,10 +85,10 @@ function send_mail($data) {
         Message: {$data['message']}
         EOT;
 		if (!$mail->send()) {
-			$msg = "<p>Mailer Error: " . $mail->ErrorInfo . "</p>";
+			$data['msg'] = "<p>Mailer Error: " . $mail->ErrorInfo . "</p>";
 			$data['success'] = false;
 		} else {
-			$msg = "<p>Message sent.</p><p>Thank you! I will get back to you as soon as possible.</p>";
+			$data['msg'] = "<p>Message sent.</p><p>Thank you! I will get back to you as soon as possible.</p>";
 			$data['success'] = true;
 		}
     }
