@@ -28,8 +28,8 @@
             }
 
             if (data.errors.business_msg) {
-              $("#name-group").addClass("has-error");
-              $("#name-group").prepend(
+              $("#business-group").addClass("has-error");
+              $("#business-group").prepend(
                 '<div class="help-block text-danger">' + data.errors.business_msg + "</div>"
               );
             }

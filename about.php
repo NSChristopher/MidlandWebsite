@@ -121,7 +121,7 @@
                 <div id="business-group">
                   <div class="form-outline mb-4">
                     <input type="text" name="business" id="business" class="form-control" />
-                    <label class="form-label" for="business">Name</label>
+                    <label class="form-label" for="business">Business Name</label>
                   </div>
                 </div>
 

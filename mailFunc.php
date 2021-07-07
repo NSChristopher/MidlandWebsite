@@ -41,7 +41,7 @@ public function sanitize_and_validate($data) {
 	$data['business'] = trim($data['business']);
 	$data['business'] = filter_var($data['business'], FILTER_SANITIZE_STRING);
 	if (empty($data['business'])) {
-		$data['errors']['business_msg'] = "business is empty or invalid";
+		$data['errors']['business_msg'] = "business name is empty or invalid";
 		$data['success'] = false;
 	}
 
