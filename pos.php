@@ -202,7 +202,7 @@
       <div class="container">
         <div class="unslant-content text-center m-md-5 card card-rounded p-5 shadow-3-strong">
 
-          <h3 class="mb-3">Lets Get Started!</h3>
+          <h3 class="mb-3">Tell us about your Business!</h3>
           <p>We will reply to your message as soon as possible. The average response time is 24h.</p>
 
           <br class="my-4">
@@ -212,7 +212,7 @@
             <div class="col-md-6 mb-4">
 
               <form id="form" name="form" action="" method="POST">
-                <h2>Contact us</h2>
+                <h2 class="mb-4">Message us</h2>
 
                 <div id="name-group">
                   <div class="form-outline mb-4">
@@ -238,12 +238,14 @@
                 <div id="volume-group">
                   <div class="form-outline mb-4">
                     <select id="volume" name="volume" class="select">
+                      <option value="make a selection">make a selection</option>
                       <option value="0-10k">0-10k</option>
                       <option value="10-25k">10-25k</option>
                       <option value="25-50k">25-50k</option>
                       <option value="50-100k">50-100k</option>
                       <option value="100-250k">100-250k</option>
                       <option value="250k+">250k+</option>
+                      <option value="I'd rather not say">I'd rather not say</option>
                     </select>
                     <label class="form-label select-label">Monthly Volume</label>
                   </div>
@@ -261,9 +263,27 @@
                 </button>
               </form>
 
+              <hr class="text-white my-4">
+
+              <h3 class="mb-4">Give us a call</h3>
+              <div class="row">
+                <div class="col-12 text-start">
+                  <p>Sales: (917) 254-6874</p>
+                </div>
+                <div class="col-12 text-start">
+                  <a href="tel:9172546874">
+                    <button type="button" class="btn btn-warning btn-rounded mb-4"><i class="fas fa-phone-alt fa-lg"></i>&nbsp;&nbsp;&nbsp;Call Now</button>
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
+
+
         </div>
+
+        <br class="my-4">
 
       </div>
     </section>

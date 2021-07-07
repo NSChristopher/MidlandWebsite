@@ -138,12 +138,14 @@
                 <div id="volume-group">
                   <div class="form-outline mb-4">
                     <select id="volume" name="volume" class="select">
+                      <option value="make a selection">make a selection</option>
                       <option value="0-10k">0-10k</option>
                       <option value="10-25k">10-25k</option>
                       <option value="25-50k">25-50k</option>
                       <option value="50-100k">50-100k</option>
                       <option value="100-250k">100-250k</option>
                       <option value="250k+">250k+</option>
+                      <option value="I'd rather not say">I'd rather not say</option>
                     </select>
                     <label class="form-label select-label">Monthly Volume</label>
                   </div>

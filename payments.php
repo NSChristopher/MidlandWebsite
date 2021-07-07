@@ -143,7 +143,7 @@
             <div class="col-md-6 mb-4">
 
               <form id="form" name="form" action="" method="POST">
-                <h2>Contact us</h2>
+                <h2 class="mb-4">Message us</h2>
 
                 <div id="name-group">
                   <div class="form-outline mb-4">
@@ -194,9 +194,27 @@
                 </button>
               </form>
 
+              <hr class="text-white my-4">
+
+              <h3 class="mb-4">Give us a call</h3>
+              <div class="row">
+                <div class="col-12 text-start">
+                  <p>Sales: (917) 254-6874</p>
+                </div>
+                <div class="col-12 text-start">
+                  <a href="tel:9172546874">
+                    <button type="button" class="btn btn-warning btn-rounded mb-4"><i class="fas fa-phone-alt fa-lg"></i>&nbsp;&nbsp;&nbsp;Call Now</button>
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
+
+
         </div>
+
+        <br class="my-4">
 
       </div>
     </section>
