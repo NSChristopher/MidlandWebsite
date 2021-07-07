@@ -22,8 +22,7 @@ public function sanitize_and_validate($data) {
 		$data['errors']['email_msg'] = "email over 100 characters";
 		$data['success'] = false;
 	}
-	if (! $this->okLength($data['subject'], 250)) {
-		$data['errors']['subject_msg'] = "subject over 250 characters";
+	if (! $this->okLength($data['volume'], 100)) {
 		$data['success'] = false;
 	}
 	if (! $this->okLength($data['message'], 2048)) {
@@ -52,12 +51,8 @@ public function sanitize_and_validate($data) {
 		$data['success'] = false;
 	}
 
-	$data['subject'] = trim($data['subject']);
-	$data['subject'] = filter_var($data['subject'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
-	if (empty($data['subject'])) {
-		$data['errors']['subject_msg'] = "subject is empty or invalid";
-		$data['success'] = false;
-	}
+	$data['volume'] = trim($data['volume']);
+	$data['volume'] = filter_var($data['volume'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 
 	$data['message'] = trim($data['message']);
 	$data['message'] = filter_var($data['message'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
@@ -88,12 +83,13 @@ function send_mail($data) {
     $mail->setFrom('noah@cardpaymentsolutions.com', 'Gus Prentzas');
     $mail->addAddress('noahschristopher250@gmail.com', 'Receiver Name');
     if ($mail->addReplyTo($data['email'], $data['name'])) {
-        $mail->Subject = $data['business'] . ' | ' . $data['subject'] . ' | Midland Web Inquiry';
+        $mail->Subject = $data['business'] . ' | Midland Web Inquiry';
         $mail->isHTML(false);
         $mail->Body = <<<EOT
 		Email: {$data['email']}
 		Name: {$data['name']}
 		Business: {$data['business']}
+		Volume: {$data['volume']}
 		Message: {$data['message']}
 		EOT;
 		if (!$mail->send()) {

@@ -7,7 +7,7 @@
         name: $("#name").val(),
         business: $("#business").val(),
         email: $("#email").val(),
-        subject: $("#subject").val(),
+        volume: $("#volume").val(),
         message: $("#message").val(),
       };
 
@@ -61,7 +61,8 @@
                 '<div class="help-block text-danger">' + data.errors.message_msg + "</div>"
               );
             }
-          } else {
+          } 
+          else if (data.success) {
             $("form").html(
               '<div class="alert alert-success">' + data.msg + "</div>"
             );

@@ -132,11 +132,19 @@
                   </div>
                 </div>
 
-                <div id="subject-group">
-                  <div class="form-outline mb-4">
-                    <input type="text" name="subject" id="subject" class="form-control" />
-                    <label class="form-label" for="subject">Subject</label>
-                  </div>
+                <div id="volume-group">
+                  <select 
+                  id="volume"
+                  name="volume"
+                  class="select">
+                    <option value="1">0-10k</option>
+                    <option value="2">10-25k</option>
+                    <option value="3">25-50k</option>
+                    <option value="4">50-100k</option>
+                    <option value="5">100-250k</option>
+                    <option value="6">250k+</option>
+                  </select>
+                  <label class="form-label select-label">Estimated Monthly Volume</label>
                 </div>
 
                 <div id="message-group">
