@@ -9,7 +9,7 @@ $data = array(
     'message' => $_POST['message'],
     'success' => true,
     'errors' => [],
-    'msg' => '',
+    'msg',
 );
 
 $func = new mailFunc();
