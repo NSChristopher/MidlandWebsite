@@ -1,5 +1,5 @@
 <?php
-include 'services/mailFunc.php';
+include 'mailFunc.php';
 header('Content-type: application/json');
 $response['success'] = true;
 $response['error'] = null;
