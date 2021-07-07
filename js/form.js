@@ -62,11 +62,10 @@
               );
             }
           }
-          if (data.success) {
+          
             $("form").html(
-              '<div class="alert alert-success">' + data.msg + "</div>"
+              '<div class="alert alert-success">' + data.success + "</div>"
             );
-          }
           }); event.preventDefault();
       });
   });
