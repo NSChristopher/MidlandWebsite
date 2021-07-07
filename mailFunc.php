@@ -100,6 +100,6 @@ function send_mail($data) {
 			$data['success'] = true;
 		}
     }
-	echo json_encode($data);
+	return $data;
 }
 }
