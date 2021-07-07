@@ -22,7 +22,7 @@ public function sanitize_and_validate($data) {
 		$data['errors']['email_msg'] = "email over 100 characters";
 		$data['success'] = false;
 	}
-	if (! $this->okLength($data['volume'], 100)) {
+	if (! $this->okLength($data['volume'], 10)) {
 		$data['success'] = false;
 	}
 	if (! $this->okLength($data['message'], 2048)) {

@@ -133,18 +133,20 @@
                 </div>
 
                 <div id="volume-group">
-                  <select 
-                  id="volume"
-                  name="volume"
-                  class="select">
-                    <option value="1">0-10k</option>
-                    <option value="2">10-25k</option>
-                    <option value="3">25-50k</option>
-                    <option value="4">50-100k</option>
-                    <option value="5">100-250k</option>
-                    <option value="6">250k+</option>
-                  </select>
-                  <label class="form-label select-label">Estimated Monthly Volume</label>
+                  <div class="mb-4">
+                    <select 
+                    id="volume"
+                    name="volume"
+                    class="select">
+                      <option value="0-10k">0-10k</option>
+                      <option value="10-25k">10-25k</option>
+                      <option value="25-50k">25-50k</option>
+                      <option value="50-100k">50-100k</option>
+                      <option value="100-250k">100-250k</option>
+                      <option value="250k+">250k+</option>
+                    </select>
+                    <label class="form-label select-label">Monthly Volume</label>
+                  </div>
                 </div>
 
                 <div id="message-group">
