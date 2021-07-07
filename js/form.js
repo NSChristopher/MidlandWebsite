@@ -24,41 +24,41 @@
             if (data.errors.name_msg) {
               $("#name-group").addClass("has-error");
               $("#name-group").prepend(
-                '<div class="help-block text-danger">' + data.errors.name_msg + "</div>"
+                '<div class="help-block text-danger text-start">' + data.errors.name_msg + "</div>"
               );
             }
 
             if (data.errors.business_msg) {
               $("#business-group").addClass("has-error");
               $("#business-group").prepend(
-                '<div class="help-block text-danger">' + data.errors.business_msg + "</div>"
+                '<div class="help-block text-danger text-start">' + data.errors.business_msg + "</div>"
               );
             }
 
             if (data.errors.email_msg) {
               $("#email-group").addClass("has-error");
               $("#email-group").prepend(
-                '<div class="help-block text-danger">' + data.errors.email_msg + "</div>"
+                '<div class="help-block text-danger text-start">' + data.errors.email_msg + "</div>"
               );
             }
 
             if (data.errors.subject_msg) {
               $("#subject-group").addClass("has-error");
               $("#subject-group").prepend(
-                '<div class="help-block text-danger">' + data.errors.subject_msg + "</div>"
+                '<div class="help-block text-danger text-start">' + data.errors.subject_msg + "</div>"
               );
             }
 
             if (data.errors.message_msg) {
               $("#message-group").addClass("has-error");
               $("#message-group").prepend(
-                '<div class="help-block text-danger">' + data.errors.message_msg + "</div>"
+                '<div class="help-block text-danger text-start">' + data.errors.message_msg + "</div>"
               );
             }
             if (data.msg) {
               $("#form").addClass("has-error");
               $("#form").prepend(
-                '<div class="help-block text-danger">' + data.errors.message_msg + "</div>"
+                '<div class="help-block text-danger text-start">' + data.errors.message_msg + "</div>"
               );
             }
           } 
