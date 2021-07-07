@@ -88,7 +88,7 @@ function send_mail($data) {
     $mail->setFrom('noah@cardpaymentsolutions.com', 'Gus Prentzas');
     $mail->addAddress('noahschristopher250@gmail.com', 'Receiver Name');
     if ($mail->addReplyTo($data['email'], $data['name'])) {
-        $mail->Subject = $data['subject'] . ' | Website Contact';
+        $mail->Subject = $data['business'] . ' | ' . $data['subject'] . ' | Midland Web Inquiry';
         $mail->isHTML(false);
         $mail->Body = <<<EOT
 		Email: {$data['email']}
