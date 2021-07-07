@@ -109,7 +109,7 @@
             <div class="col-md-6 mb-4">
 
               <form id="form" name="form" action="" method="POST">
-                <h2>Message us</h2>
+                <h2 class="mb-4">Message us</h2>
 
                 <div id="name-group">
                   <div class="form-outline mb-4">
@@ -163,7 +163,7 @@
             </div>
           </div>
 
-          <h3 class="mb-3">Give us a call</h3>
+          <h3 class="mb-4">Give us a call</h3>
           <div class="row">
             <div class="col-6">
               <p>sales: (917) 254-6874</p>
