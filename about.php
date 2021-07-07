@@ -133,7 +133,7 @@
                 </div>
 
                 <div id="volume-group">
-                  <div class="mb-4">
+                  <div class="form-outline mb-4">
                     <select 
                     id="volume"
                     name="volume"
