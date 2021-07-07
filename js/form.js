@@ -61,8 +61,8 @@
                 '<div class="help-block text-danger">' + data.errors.message_msg + "</div>"
               );
             }
-          } 
-          else if (data.success) {
+          }
+          if (data.success) {
             $("form").html(
               '<div class="alert alert-success">' + data.msg + "</div>"
             );
