@@ -162,10 +162,10 @@
 
               <h3 class="mb-4">Give us a call</h3>
           <div class="row">
-            <div class="col-12">
+            <div class="col-12 text-left">
               <p>Sales: (917) 254-6874</p>
             </div>
-            <div class="col-12">
+            <div class="col-12 text-left">
               <a href="tel:9172546874">
                 <button type="button" class="btn btn-warning btn-rounded me-sm-3 mb-4"><i class="fas fa-phone-alt"></i> Call Now</button>
               </a>
