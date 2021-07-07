@@ -1,23 +1,22 @@
 <?php
 include 'mailFunc.php';
 header('Content-type: application/json');
-$response['success'] = true;
-$response['error'] = null;
 
 $data = array(
     'name' => $_POST['name'],
     'email' => $_POST['email'],
     'subject' => $_POST['subject'],
     'message' => $_POST['message'],
-    'error' => false,
+    'success' => true,
     'errors' => [],
+    'msg' => '',
 );
 
 $func = new mailFunc();
 
 $data = $func->sanitize_and_validate($data);
 
-if (!($data['error'])) {
+if (!($data['success'])) {
     $data = $func->send_mail($data);
 }
 

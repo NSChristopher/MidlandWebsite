@@ -19,42 +19,37 @@
       }).done(function(data) {
           console.log(data);
 
-          $("#name-group").addClass("has-error");
-          $("#name-group").prepend(
-            '<div class="help-block text-danger"> hello' + data.name + "</div>"
-          );
-
           if (!data.success) {
-            if (data.errors.name) {
+            if (data.errors.name_msg) {
               $("#name-group").addClass("has-error");
               $("#name-group").prepend(
-                '<div class="help-block text-danger">' + data.errors.name + "</div>"
+                '<div class="help-block text-danger">' + data.errors.name_msg + "</div>"
               );
             }
 
-            if (data.errors.email) {
+            if (data.errors.email_msg) {
               $("#email-group").addClass("has-error");
               $("#email-group").prepend(
-                '<div class="help-block text-danger">' + data.errors.email + "</div>"
+                '<div class="help-block text-danger">' + data.errors.email_msg + "</div>"
               );
             }
 
-            if (data.errors.subject) {
+            if (data.errors.subject_msg) {
               $("#subject-group").addClass("has-error");
               $("#subject-group").prepend(
-                '<div class="help-block text-danger">' + data.errors.subject + "</div>"
+                '<div class="help-block text-danger">' + data.errors.subject_msg + "</div>"
               );
             }
 
-            if (data.errors.message) {
+            if (data.errors.message_msg) {
               $("#message-group").addClass("has-error");
               $("#message-group").prepend(
-                '<div class="help-block text-danger">' + data.errors.message + "</div>"
+                '<div class="help-block text-danger">' + data.errors.message_msg + "</div>"
               );
             }
             } else {
               $("form").html(
-                '<div class="alert alert-success">' + data.message + "</div>"
+                '<div class="alert alert-success">' + data.msg + "</div>"
               );
             }
           }); event.preventDefault();

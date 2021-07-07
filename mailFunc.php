@@ -12,47 +12,47 @@ public function sanitize_and_validate($data) {
 
 	if (! $this->okLength($data['name'], 100)) {
 		$data['errors']['name_msg'] .= "<p>name over 100 characters</p>";
-		$data['error'] = true;
+		$data['success'] = false;
 	}
 	if (! $this->okLength($data['email'], 100)) {
-		$data['errors']['email_length'] = "email over 100 characters";
-		$data['error'] = true;
+		$data['errors']['email_msg'] = "email over 100 characters";
+		$data['success'] = false;
 	}
 	if (! $this->okLength($data['subject'], 250)) {
-		$data['errors']['subject_length'] = "subject over 250 characters";
-		$data['error'] = true;
+		$data['errors']['subject_msg'] = "subject over 250 characters";
+		$data['success'] = false;
 	}
 	if (! $this->okLength($data['message'], 2048)) {
-		$data['errors']['message_length'] = "message over 2048 characters";
-		$data['error'] = true;
+		$data['errors']['message_msg'] = "message over 2048 characters";
+		$data['success'] = false;
 	}
 
 	$data['name'] = trim($data['name']);
 	$data['name'] = filter_var($data['name'], FILTER_SANITIZE_STRING);
 	if (empty($data['name'])) {
 		$data['errors']['name_msg'] .= "<p>name is empty or invalid</p>";
-		$data['error'] = true;
+		$data['success'] = false;
 	}
 
 	$data['email'] = trim($data['email']);
 	$data['email'] = filter_var($data['email'], FILTER_SANITIZE_EMAIL);
 	if (! filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-		$data['errors']['email_filter'] = "email is empty or invalid";
-		$data['error'] = true;
+		$data['errors']['email_msg'] = "email is empty or invalid";
+		$data['success'] = false;
 	}
 
 	$data['subject'] = trim($data['subject']);
 	$data['subject'] = filter_var($data['subject'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 	if (empty($data['subject'])) {
-		$data['errors']['subject_filter'] = "subject is empty or invalid";
-		$data['error'] = true;
+		$data['errors']['subject_msg'] = "subject is empty or invalid";
+		$data['success'] = false;
 	}
 
 	$data['message'] = trim($data['message']);
 	$data['message'] = filter_var($data['message'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 	if (empty($data['message'])) {
-		$data['errors']['message_filter'] = "message is empty or invalid";
-		$data['error'] = true;
+		$data['errors']['message_msg'] = "message is empty or invalid";
+		$data['success'] = false;
 	}
 
 	return $data;
@@ -85,14 +85,14 @@ function send_mail($data) {
         Message: {$data['message']}
         EOT;
 		if (!$mail->send()) {
-			echo json_encode("<p>Mailer Error: " . $mail->ErrorInfo . "</p>");
-			return False;
+			$msg = "<p>Mailer Error: " . $mail->ErrorInfo . "</p>";
+			$data['success'] = false;
 		} else {
 			$msg = "<p>Message sent.</p><p>Thank you! I will get back to you as soon as possible.</p>";
-			echo json_encode($msg);
-			return True;
+			$data['success'] = true;
 		}
     }
+	return $data;
 }
 }
 ?>
