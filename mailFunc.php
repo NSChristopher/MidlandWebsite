@@ -5,13 +5,13 @@ class mailFunc {
   
 private function okLength($str, $maxlen) {
     $len = strlen($str);
-    return ($len > 0) and ($len <= $maxlen);
+    return $len <= $maxlen;
 }
 
 public function sanitize_and_validate($data) {
 
 	if (! $this->okLength($data['name'], 100)) {
-		$data['errors']['name_msg'] .= "<p>name over 100 characters</p>";
+		$data['errors']['name_msg'] = "name over 100 characters";
 		$data['success'] = false;
 	}
 	if (! $this->okLength($data['email'], 100)) {
@@ -30,7 +30,7 @@ public function sanitize_and_validate($data) {
 	$data['name'] = trim($data['name']);
 	$data['name'] = filter_var($data['name'], FILTER_SANITIZE_STRING);
 	if (empty($data['name'])) {
-		$data['errors']['name_msg'] .= "<p>name is empty or invalid</p>";
+		$data['errors']['name_msg'] = "name is empty or invalid";
 		$data['success'] = false;
 	}
 
@@ -89,7 +89,6 @@ function send_mail($data) {
 			$data['success'] = false;
 		} else {
 			$data['msg'] = "<p>Message sent.</p><p>Thank you! I will get back to you as soon as possible.</p>";
-			$data['success'] = true;
 		}
     }
 	return $data;
