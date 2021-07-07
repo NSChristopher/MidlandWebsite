@@ -20,10 +20,6 @@
       }).done(function(data) {
           console.log(data);
 
-          $("form").html(
-            '<div class="alert alert-success">' + data.msg + "</div>"
-          );
-
           if (!data.success) {
             if (data.errors.name_msg) {
               $("#name-group").addClass("has-error");
@@ -59,11 +55,11 @@
                 '<div class="help-block text-danger">' + data.errors.message_msg + "</div>"
               );
             }
-            } else {
-              $("form").html(
-                '<div class="alert alert-success">' + data.msg + "</div>"
-              );
-            }
+          } else {
+            $("form").html(
+              '<div class="alert alert-success">' + data.msg + "</div>"
+            );
+          }
           }); event.preventDefault();
       });
   });
