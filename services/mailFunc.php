@@ -80,6 +80,8 @@ function send_mail($data) {
     $email = $data['email'];
     $subject = $data['subject'];
     $message = $data['message'];
+	$error = $data['error'];
+	$errors = $data['errors'];
 
     $mail->IsSMTP();
     $mail->SMTPDebug = 2;
@@ -104,11 +106,10 @@ function send_mail($data) {
         EOT;
 		if (!$mail->send()) {
 			echo json_encode("<p>Mailer Error: " . $mail->ErrorInfo . "</p>");
-			return False;
+			$error = True;
 		} else {
 			$msg = "<p>Message sent.</p><p>Thank you! I will get back to you as soon as possible.</p>";
-			echo $msg;
-			return True;
+			echo json_encode($msg);
 		}
     }
 }
