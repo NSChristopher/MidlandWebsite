@@ -5,6 +5,7 @@
 
       var formData = {
         name: $("#name").val(),
+        business: $("#business").val(),
         email: $("#email").val(),
         subject: $("#subject").val(),
         message: $("#message").val(),
