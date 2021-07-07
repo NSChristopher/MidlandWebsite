@@ -100,7 +100,7 @@ function send_mail($data) {
 			$data['success'] = true;
 		}
     }
-	return $data;
+	echo json_encode($data);
 }
 }
 ?>
