@@ -162,7 +162,7 @@
 
               <h3 class="mb-4">Give us a call</h3>
           <div class="row">
-            <div class="col-12 me-auto">
+            <div class="col-12 text-start">
               <p>Sales: (917) 254-6874</p>
             </div>
             <div class="col-12 text-start">
