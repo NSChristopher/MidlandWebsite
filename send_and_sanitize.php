@@ -15,26 +15,11 @@ $data = array(
 
 $func = new mailFunc();
 
-try {
-    $data = $func->sanitize_and_validate($data);
+$data = $func->sanitize_and_validate($data);
 
-    try {
-    if (!($data['error'])) {
-        $func->send_mail($data);
-    }
-    else {
-        echo json_encode("mail not sent");
-    }
-    }
-    catch (\Error $e){
-        echo json_encode($e->getMessage());
-    }
-    
+if (!($data['error'])) {
+    $data = $func->send_mail($data);
 }
-catch (\Error $e) {
-    $response['success'] = false;
-    $response['error'] = $e->getMessage();
-}
-echo json_encode($response);
+
 echo json_encode($data);
 ?>
