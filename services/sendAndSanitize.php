@@ -18,12 +18,18 @@ $func = new mailFunc();
 try {
     $data = $func->sanitize_and_validate($data);
 
+    try {
     if (!($data['error'])) {
         $func->send_mail($data);
     }
     else {
         echo json_encode("mail not sent");
     }
+    }
+    catch (\Error $e){
+        echo json_encode($e->getMessage());
+    }
+    
 }
 catch (\Error $e) {
     $response['success'] = false;
