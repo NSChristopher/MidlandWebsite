@@ -134,10 +134,7 @@
 
                 <div id="volume-group">
                   <div class="form-outline mb-4">
-                    <select 
-                    id="volume"
-                    name="volume"
-                    class="select">
+                    <select id="volume" name="volume" class="select">
                       <option value="0-10k">0-10k</option>
                       <option value="10-25k">10-25k</option>
                       <option value="25-50k">25-50k</option>
@@ -161,23 +158,25 @@
                 </button>
               </form>
 
+              <br class="my-4">
+
+              <h3 class="mb-3">Or give us a call!</h3>
+              <div class="row">
+                <div class="col-6">
+                  <p>sales: (917) 254-6874</p>
+                </div>
+                <div class="col-6">
+                  <a href="tel:9172546874">
+                    <button type="button" class="btn btn-warning btn-rounded me-sm-3 mb-4"><i class="fas fa-phone-alt"></i> Call Now</button>
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
 
         <br class="my-4">
-
-        <h3 class="mb-3">Or give us a call!</h3>
-        <div class="row">
-          <div class="col-6">
-            <p>sales: (917) 254-6874</p>
-          </div>
-          <div class="col-6">
-            <a href="tel:9172546874">
-              <button type="button" class="btn btn-warning btn-rounded me-sm-3 mb-4"><i class="fas fa-phone-alt"></i> Call Now</button>
-            </a>
-          </div>
-        </div>
 
       </div>
     </section>
