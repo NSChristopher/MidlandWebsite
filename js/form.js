@@ -12,7 +12,7 @@
 
       $.ajax({
         type: "POST",
-        url: "sendAndSanitize.php",
+        url: "send_and_sanitize.php",
         data: formData,
         dataType: "json",
         encode: true,
