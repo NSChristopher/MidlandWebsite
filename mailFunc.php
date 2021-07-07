@@ -103,4 +103,3 @@ function send_mail($data) {
 	echo json_encode($data);
 }
 }
-?>
