@@ -87,9 +87,12 @@
         </div>
     </section>
 
+    <br class="my-4">
+
     <section class="vect-map">
-      <div class="container p-5 text-center">
-        <img style="max-width: 90%;" src="img/VecMap.png" alt="">
+      <div class="container text-center">
+        <h3 class="mb-4 text-start">Serving Businesses across the Nation!</h3>
+        <img class="my-5" style="max-width: 90%;" src="img/VecMap.png" alt="">
       </div>
     </section>
 
@@ -158,19 +161,19 @@
                 </button>
               </form>
 
-              <br class="my-4">
+              <hr class="text-white my-4">
 
               <h3 class="mb-4">Give us a call</h3>
-          <div class="row">
-            <div class="col-12 text-start">
-              <p>Sales: (917) 254-6874</p>
-            </div>
-            <div class="col-12 text-start">
-              <a href="tel:9172546874">
-                <button type="button" class="btn btn-warning btn-rounded me-sm-3 mb-4"><i class="fas fa-phone-alt"></i> &nbsp;Call Now</button>
-              </a>
-            </div>
-          </div>
+              <div class="row">
+                <div class="col-12 text-start">
+                  <p>Sales: (917) 254-6874</p>
+                </div>
+                <div class="col-12 text-start">
+                  <a href="tel:9172546874">
+                    <button type="button" class="btn btn-warning btn-rounded mb-4"><i class="fas fa-phone-alt fa-lg"></i>&nbsp;&nbsp;&nbsp;Call Now</button>
+                  </a>
+                </div>
+              </div>
 
             </div>
           </div>
