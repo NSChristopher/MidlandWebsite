@@ -21,7 +21,7 @@
           console.log(data);
 
           $("form").html(
-            '<div class="alert alert-success">' + data.success + "</div>"
+            '<div class="alert alert-success">yo ' + data.success + "</div>"
           );
 
           if (!data.success) {
