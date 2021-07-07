@@ -20,6 +20,10 @@
       }).done(function(data) {
           console.log(data);
 
+          $("form").html(
+            '<div class="alert alert-success">' + data.success + "</div>"
+          );
+
           if (!data.success) {
             if (data.errors.name_msg) {
               $("#name-group").addClass("has-error");
@@ -62,10 +66,6 @@
               );
             }
           }
-          
-            $("form").html(
-              '<div class="alert alert-success">' + data.success + "</div>"
-            );
           }); event.preventDefault();
       });
   });
