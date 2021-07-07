@@ -78,7 +78,7 @@
                 <div class="col-md-5 col-lg-5 pb-3 px-5 px-md-3">
                   <div class="pt-5 pb-3">
                     <a href="tel:9172546874">
-                      <button type="button" class="btn btn-warning btn-rounded me-sm-3 mb-4 mx-2"><i class="fas fa-phone-alt"></i> &nbsp;Call Now</button>
+                      <button type="button" class="btn btn-warning btn-rounded me-sm-3 mb-4 mx-2"><i class="fas fa-phone-alt fa-lg"></i>&nbsp;&nbsp;&nbsp;Call Now</button>
                     </a>
                     <a href="about">
                       <button type="button" class="btn btn-outline-light btn-rounded mb-4 mx-2">More Info</button>
