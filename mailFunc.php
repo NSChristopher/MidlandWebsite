@@ -80,8 +80,8 @@ function send_mail($data) {
     $mail->Username = 'platinumpayrol@gmail.com';
     $mail->Password = 'uetsnvrihifjbdcc';
 
-    $mail->setFrom('noah@cardpaymentsolutions.com', 'Gus Prentzas');
-    $mail->addAddress('noahschristopher250@gmail.com', 'Receiver Name');
+    $mail->setFrom('midlandpaymentservices@gmail.com', 'Gus Prentzas');
+    $mail->addAddress('midlandpaymentservices@gmail.com', 'Gus Prentzas');
     if ($mail->addReplyTo($data['email'], $data['name'])) {
         $mail->Subject = $data['business'] . ' | Midland Web Inquiry';
         $mail->isHTML(false);
