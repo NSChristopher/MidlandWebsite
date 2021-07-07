@@ -34,9 +34,7 @@
       <div class="container">
         <a href="home" class="navbar-brand logo">MIDLAND</a>
 
-        <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse"
-          data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
 
@@ -86,8 +84,8 @@
             <h3 class="mb-3">Truly Secure Payments</h3>
             <p class="mb-4">
               Rest easy with confidence that your payments are being processed securely.
-              At Midland, we work hard to ensure our customers meet the highest compliance standards. 
-              In addition to monitoring each of our accounts for compliance we provide our customers 
+              At Midland, we work hard to ensure our customers meet the highest compliance standards.
+              In addition to monitoring each of our accounts for compliance we provide our customers
               with only the most secure payment equipment. Start processing securely today!
             </p>
           </div>
@@ -104,8 +102,7 @@
         <div class="row">
           <div class="col-md-4 mb-4">
             <div class="bg-image hover-zoom mb-4 shadow-1-strong rounded">
-              <img src="img/Terminal.png"
-              class="img-fluid" />
+              <img src="img/Terminal.png" class="img-fluid" />
             </div>
             <h5 class="mb-3">Terminal</h5>
             <p class="mb-4">Counter top terminals are a great start for accepting payments. Our terminals take chip as well as NFC tap transactions.</p>
@@ -116,7 +113,7 @@
             </div>
             <h5 class="mb-3">Point of Sale</h5>
             <p class="mb-4">
-            Manage business operations like inventory payroll etc. while taking secure payments.</p>
+              Manage business operations like inventory payroll etc. while taking secure payments.</p>
           </div>
           <div class="col-md-4 mb-4">
             <div class="bg-image hover-zoom mb-4 shadow-1-strong rounded">
@@ -124,7 +121,7 @@
             </div>
             <h5 class="mb-3">Mobile</h5>
             <p class="mb-4">
-            Accept payment form anywhere with Midlands mobile phone chipper attachment.</p>
+              Accept payment form anywhere with Midlands mobile phone chipper attachment.</p>
           </div>
         </div>
       </div>
@@ -145,13 +142,20 @@
 
             <div class="col-md-6 mb-4">
 
-            <form id="form" name="form" action="form.php" method="POST">
+              <form id="form" name="form" action="" method="POST">
                 <h2>Contact us</h2>
 
                 <div id="name-group">
                   <div class="form-outline mb-4">
                     <input type="text" name="name" id="name" class="form-control" />
                     <label class="form-label" for="name">Name</label>
+                  </div>
+                </div>
+
+                <div id="business-group">
+                  <div class="form-outline mb-4">
+                    <input type="text" name="business" id="business" class="form-control" />
+                    <label class="form-label" for="business">Business Name</label>
                   </div>
                 </div>
 
@@ -162,10 +166,17 @@
                   </div>
                 </div>
 
-                <div id="subject-group">
+                <div id="volume-group">
                   <div class="form-outline mb-4">
-                    <input type="text" name="subject" id="subject" class="form-control" />
-                    <label class="form-label" for="subject">Subject</label>
+                    <select id="volume" name="volume" class="select">
+                      <option value="0-10k">0-10k</option>
+                      <option value="10-25k">10-25k</option>
+                      <option value="25-50k">25-50k</option>
+                      <option value="50-100k">50-100k</option>
+                      <option value="100-250k">100-250k</option>
+                      <option value="250k+">250k+</option>
+                    </select>
+                    <label class="form-label select-label">Monthly Volume</label>
                   </div>
                 </div>
 
@@ -179,11 +190,6 @@
                 <button type="submit" name="send" Value="Submit" class="btn btn-primary btn-block mb-4">
                   Send
                 </button>
-
-                <?php if (!empty($msg)) {
-                  echo "<h4>$msg</h4>";
-                } ?>
-
               </form>
 
             </div>

@@ -35,9 +35,7 @@
       <div class="container">
         <a href="home" class="navbar-brand logo">MIDLAND</a>
 
-        <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse"
-          data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
 
@@ -157,13 +155,20 @@
 
             <div class="col-md-6 mb-4">
 
-            <form id="form" name="form" action="form.php" method="POST">
+              <form id="form" name="form" action="" method="POST">
                 <h2>Contact us</h2>
 
                 <div id="name-group">
                   <div class="form-outline mb-4">
                     <input type="text" name="name" id="name" class="form-control" />
                     <label class="form-label" for="name">Name</label>
+                  </div>
+                </div>
+
+                <div id="business-group">
+                  <div class="form-outline mb-4">
+                    <input type="text" name="business" id="business" class="form-control" />
+                    <label class="form-label" for="business">Business Name</label>
                   </div>
                 </div>
 
@@ -174,10 +179,17 @@
                   </div>
                 </div>
 
-                <div id="subject-group">
+                <div id="volume-group">
                   <div class="form-outline mb-4">
-                    <input type="text" name="subject" id="subject" class="form-control" />
-                    <label class="form-label" for="subject">Subject</label>
+                    <select id="volume" name="volume" class="select">
+                      <option value="0-10k">0-10k</option>
+                      <option value="10-25k">10-25k</option>
+                      <option value="25-50k">25-50k</option>
+                      <option value="50-100k">50-100k</option>
+                      <option value="100-250k">100-250k</option>
+                      <option value="250k+">250k+</option>
+                    </select>
+                    <label class="form-label select-label">Monthly Volume</label>
                   </div>
                 </div>
 
@@ -191,18 +203,11 @@
                 <button type="submit" name="send" Value="Submit" class="btn btn-primary btn-block mb-4">
                   Send
                 </button>
-
-                <?php if (!empty($msg)) {
-                  echo "<h4>$msg</h4>";
-                } ?>
-
               </form>
-
             </div>
           </div>
-        </div>
 
-      </div>
+        </div>
     </section>
 
   </main>
