@@ -15,10 +15,10 @@ $data = array(
 
 $func = new mailFunc();
 
-$func->sanitize_and_validate($data);
+$data = $func->sanitize_and_validate($data);
 
 if ($data['success']) {
-    $func->send_mail($data);
+    $data = $func->send_mail($data);
 }
 
 echo json_encode($data);

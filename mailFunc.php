@@ -101,6 +101,7 @@ function send_mail($data) {
 			$data['success'] = false;
 		} else {
 			$data['msg'] = "<p>Message sent.</p><p>Thank you! I will get back to you as soon as possible.</p>";
+			$data['success'] = true;
 		}
     }
 	return $data;

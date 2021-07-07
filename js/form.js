@@ -55,6 +55,12 @@
                 '<div class="help-block text-danger">' + data.errors.message_msg + "</div>"
               );
             }
+            if (data.msg) {
+              $("#form").addClass("has-error");
+              $("#form").prepend(
+                '<div class="help-block text-danger">' + data.errors.message_msg + "</div>"
+              );
+            }
           } else {
             $("form").html(
               '<div class="alert alert-success">' + data.msg + "</div>"
