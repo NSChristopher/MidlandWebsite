@@ -17,4 +17,4 @@ RewriteRule ^(.*)$ $1.php [NC, L]
 
 # Set directory index to home
 
-DirectoryIndex home.html
+DirectoryIndex home.php
