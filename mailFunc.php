@@ -14,6 +14,10 @@ public function sanitize_and_validate($data) {
 		$data['errors']['name_msg'] = "name over 100 characters";
 		$data['success'] = false;
 	}
+	if (! $this->okLength($data['name'], 100)) {
+		$data['errors']['business'] = "business over 100 characters";
+		$data['success'] = false;
+	}
 	if (! $this->okLength($data['email'], 100)) {
 		$data['errors']['email_msg'] = "email over 100 characters";
 		$data['success'] = false;
@@ -31,6 +35,13 @@ public function sanitize_and_validate($data) {
 	$data['name'] = filter_var($data['name'], FILTER_SANITIZE_STRING);
 	if (empty($data['name'])) {
 		$data['errors']['name_msg'] = "name is empty or invalid";
+		$data['success'] = false;
+	}
+
+	$data['business'] = trim($data['business']);
+	$data['business'] = filter_var($data['business'], FILTER_SANITIZE_STRING);
+	if (empty($data['business'])) {
+		$data['errors']['business_msg'] = "business is empty or invalid";
 		$data['success'] = false;
 	}
 
@@ -80,10 +91,11 @@ function send_mail($data) {
         $mail->Subject = $data['subject'] . ' | Website Contact';
         $mail->isHTML(false);
         $mail->Body = <<<EOT
-        Email: {$data['email']}
-        Name: {$data['name']}
-        Message: {$data['message']}
-        EOT;
+		Email: {$data['email']}
+		Name: {$data['name']}
+		Business: {$data['business']}
+		Message: {$data['message']}
+		EOT;
 		if (!$mail->send()) {
 			$data['msg'] = "<p>Mailer Error: " . $mail->ErrorInfo . "</p>";
 			$data['success'] = false;

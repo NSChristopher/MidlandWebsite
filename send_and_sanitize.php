@@ -4,6 +4,7 @@ header('Content-type: application/json');
 
 $data = array(
     'name' => $_POST['name'],
+    'business' => $_POST['business'],
     'email' => $_POST['email'],
     'subject' => $_POST['subject'],
     'message' => $_POST['message'],

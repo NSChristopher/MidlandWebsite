@@ -118,6 +118,13 @@
                   </div>
                 </div>
 
+                <div id="business-group">
+                  <div class="form-outline mb-4">
+                    <input type="text" name="business" id="business" class="form-control" />
+                    <label class="form-label" for="business">Name</label>
+                  </div>
+                </div>
+
                 <div id="email-group">
                   <div class="form-outline mb-4">
                     <input type="email" name="email" id="email" class="form-control" />
@@ -142,11 +149,6 @@
                 <button type="submit" name="send" Value="Submit" class="btn btn-primary btn-block mb-4">
                   Send
                 </button>
-
-                <?php if (!empty($msg)) {
-                  echo "<h4>$msg</h4>";
-                } ?>
-
               </form>
 
             </div>
